@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'wouter';
 import { Menu, X, Youtube, Mail, ArrowRight, Heart } from 'lucide-react';
+import logo from '../../assets/reference/logo.png';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -22,11 +23,8 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-20 items-center">
           <div className="flex-shrink-0 flex items-center">
-            <Link href="/" className="font-serif text-2xl font-bold text-primary flex items-center gap-2">
-              <span className="w-8 h-8 bg-secondary text-white rounded-full flex items-center justify-center blob-shape">
-                <Heart size={16} fill="currentColor" />
-              </span>
-              Lulubug's Garden
+            <Link href="/" className="flex items-center gap-2">
+              <img src={logo} alt="Lulubug's Garden" className="h-16 w-auto object-contain" />
             </Link>
           </div>
           
