@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | Lulubug's Garden</title>
+<meta name="description" content="Send Lulubug's Garden a bug-mail — questions about our garden friends or where to find our videos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gluten:wght@400;500;700&family=Varela+Round&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand-logo">
+      <span class="logo-mark">🐞</span>
+      <span>Lulubug's<small>GARDEN</small></span>
+    </a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="meet-garden-friends.html">Meet Garden Friends</a></li>
+      <li><a href="about-us.html">About Us</a></li>
+      <li><a href="mental-health-matters.html" class="nav-mh">🌱 Mental Health Matters</a></li>
+      <li><a href="join-now.html">Join Now</a></li>
+      <li><a href="press.html">Press</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="section section--cream-dots">
+  <div class="container">
+    <div class="card" style="max-width:620px;margin:40px auto;">
+      <p class="eyebrow text-center">We'd Love to Hear From You!</p>
+      <h1 class="text-center" style="font-size:2rem;">Send us a bug-mail</h1>
+      <p class="text-center">Whether it's about our garden friends or finding our videos, feel free to reach out.</p>
+
+      <!--
+        ROUTING NOTE (confirm before launch):
+        This form is currently set to submit to a PLACEHOLDER address —
+        stephen@REPLACE-ME-harkey.com — per your confirmation that Contact Us
+        submissions should route to Stephen at Harkey, not the Lulubug team.
+        Swap the placeholder for Stephen's real address, then:
+          • Replit prototype: wire this to a form service like Formspree
+            (https://formspree.io) — change the <form action> to your
+            Formspree endpoint and it will forward to Stephen's inbox.
+          • WordPress/Cloudways: recreate this form with WPForms or
+            Contact Form 7 and set the notification email to Stephen's
+            address. The field names below (name, email, subject, message)
+            map directly to standard WPForms/CF7 fields.
+      -->
+      <form action="#" method="POST" data-loading-label="Sending..." data-notify="stephen@REPLACE-ME-harkey.com">
+        <div class="form-field">
+          <label for="c-name">Name*</label>
+          <input type="text" id="c-name" name="name" required>
+        </div>
+        <div class="form-field">
+          <label for="c-email">Email*</label>
+          <input type="email" id="c-email" name="email" required>
+        </div>
+        <div class="form-field">
+          <label for="c-subject">Subject*</label>
+          <input type="text" id="c-subject" name="subject" required>
+        </div>
+        <div class="form-field">
+          <label for="c-message">Message*</label>
+          <textarea id="c-message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary" style="width:100%;">Send</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="eyebrow" style="color:var(--honeysuckle);">Follow the Adventure</p>
+    <div class="social-links">
+      <a href="https://www.youtube.com/@LulubugsGarden" target="_blank" rel="noopener">YouTube</a>
+      <a href="https://www.instagram.com/lulubugsgarden/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/lulubugsgarden" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.tiktok.com/@lulubugsgarden" target="_blank" rel="noopener">TikTok</a>
+    </div>
+    <div class="footer-links">
+      <a href="contact.html">Contact Us</a>
+      <a href="press.html">Press</a>
+      <a href="#">Terms and Conditions</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Cookies Policy</a>
+    </div>
+    <p class="legal">This is a commercial website from Lulubug Enterprises LLC. LULUBUG'S GARDEN is a trademark of Lulubug Enterprises LLC. Logos © 2026.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
