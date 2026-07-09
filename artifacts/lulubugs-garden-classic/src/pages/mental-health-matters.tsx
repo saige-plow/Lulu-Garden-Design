@@ -1,27 +1,28 @@
-import { Header } from "@/components/header";
+import { Sidebar } from "@/components/sidebar";
 import { Footer } from "@/components/footer";
 import { PhoneCall, HeartHandshake } from "lucide-react";
 
 export default function MentalHealthMatters() {
   return (
-    <div className="min-h-[100dvh] flex flex-col bg-[#F5F7F5] text-[#2C4A3B] selection:bg-[#4A7C59] selection:text-white">
-      {/* 988 Banner - Top Pinned */}
-      <div className="bg-[#1B3B2B] text-white py-4 px-4 sticky top-0 z-[60] border-b-4 border-[#4A7C59]">
-        <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left">
-          <PhoneCall size={28} className="text-[#A3C9A8] shrink-0" />
-          <div className="font-bold">
-            <span className="block md:inline text-lg">988 Suicide & Crisis Lifeline</span>
-            <span className="block md:inline md:ml-2 text-[#A3C9A8] font-semibold">
-              No-cost 24/7 support. Call or text 988 or chat at <a href="https://988lifeline.org" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">988lifeline.org</a>
-            </span>
-          </div>
-          <a href="tel:988" className="mt-2 md:mt-0 md:ml-4 bg-[#A3C9A8] text-[#1B3B2B] px-6 py-2 rounded-full font-black uppercase tracking-wide hover:bg-white transition-colors">
-            Call 988
-          </a>
-        </div>
-      </div>
+    <div className="min-h-[100dvh] flex flex-col md:flex-row bg-[#F5F7F5] text-[#2C4A3B] selection:bg-[#4A7C59] selection:text-white">
+      <Sidebar />
 
-      <Header />
+      <div className="flex-1 flex flex-col min-w-0">
+        {/* 988 Banner - Top Pinned */}
+        <div className="bg-[#1B3B2B] text-white py-4 px-4 sticky top-0 md:top-0 z-30 border-b-4 border-[#4A7C59]">
+          <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-4 text-center md:text-left">
+            <PhoneCall size={28} className="text-[#A3C9A8] shrink-0" />
+            <div className="font-bold">
+              <span className="block md:inline text-lg">988 Suicide & Crisis Lifeline</span>
+              <span className="block md:inline md:ml-2 text-[#A3C9A8] font-semibold">
+                No-cost 24/7 support. Call or text 988 or chat at <a href="https://988lifeline.org" target="_blank" rel="noopener noreferrer" className="underline hover:text-white">988lifeline.org</a>
+              </span>
+            </div>
+            <a href="tel:988" className="mt-2 md:mt-0 md:ml-4 bg-[#A3C9A8] text-[#1B3B2B] px-6 py-2 rounded-full font-black uppercase tracking-wide hover:bg-white transition-colors">
+              Call 988
+            </a>
+          </div>
+        </div>
 
       <main className="flex-1 flex flex-col">
         {/* Hero */}
@@ -84,7 +85,8 @@ export default function MentalHealthMatters() {
 
       </main>
 
-      <Footer />
+        <Footer />
+      </div>
     </div>
   );
 }
