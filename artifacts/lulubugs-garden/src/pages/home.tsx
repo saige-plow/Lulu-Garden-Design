@@ -3,6 +3,7 @@ import { Link } from 'wouter';
 import { Youtube, ArrowRight, PlayCircle } from 'lucide-react';
 import { Placeholder } from '../components/ui/Placeholder';
 import { NewsletterForm } from '../components/forms/NewsletterForm';
+import setPhoto from '../assets/reference/set-photo.jpg';
 
 export function Home() {
   return (
@@ -44,11 +45,10 @@ export function Home() {
           <div className="relative z-10 order-1 md:order-2 flex justify-center">
             {/* Hero Visual Placeholder */}
             <div className="relative w-full max-w-md aspect-[4/3] transform rotate-2 hover:rotate-0 transition-transform duration-500">
-              <Placeholder 
-                label="Main Hero Illustration (Lulubug & Friends)" 
-                shape="blob-1"
-                color="primary"
-                className="w-full h-full shadow-xl bg-white"
+              <img
+                src={setPhoto}
+                alt="Lulubug and the hosts on the mushroom garden set"
+                className="blob-shape w-full h-full object-cover shadow-xl bg-white"
               />
               {/* Decorative elements */}
               <div className="absolute -bottom-6 -left-6 w-24 h-24 rounded-full bg-accent/30 -z-10 blur-xl"></div>
