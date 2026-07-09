@@ -8,10 +8,10 @@ const NAV_LINKS = [
   { href: "/", label: "Home" },
   { href: "/friends", label: "Meet Garden Friends" },
   { href: "/about", label: "About Us" },
+  { href: "/mental-health-matters", label: "Mental Health Matters" },
+  { href: "/press", label: "Press" },
   { href: "/join", label: "Join Now" },
-  { href: "/contact", label: "Contact" },
-  { href: "/mental-health-matters", label: "Mental Health Matters", hidden: true },
-  { href: "/press", label: "Press", hidden: true }
+  { href: "/contact", label: "Contact" }
 ];
 
 export function Header() {
