@@ -1,6 +1,7 @@
 import { Shell } from "@/components/shell";
 import jilPhoto from "@/assets/reference/jil.jpg";
-import aboutHero from "@/assets/reference/about-hero.jpg";
+import aboutHero from "@/assets/reference/garden-illustration.jpeg";
+import teamPhoto from "@/assets/reference/team.jpg";
 
 export default function About() {
   return (
@@ -16,7 +17,7 @@ export default function About() {
               </p>
             </div>
             <div className="order-1 md:order-2 rounded-[3rem] overflow-hidden border-8 border-white shadow-2xl aspect-square">
-              <img src={aboutHero} alt="Lulubug Illustration" className="w-full h-full object-cover" />
+              <img src={aboutHero} alt="Illustrated view of Lulubug's Garden" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>
@@ -72,8 +73,8 @@ export default function About() {
             
             {/* Executive Producers */}
             <div className="bg-white rounded-[3rem] p-8 md:p-12 border-4 border-lulubug-green/10 shadow-xl flex flex-col md:flex-row gap-8 md:gap-12 items-center">
-              <div className="w-64 h-64 shrink-0 rounded-[2rem] bg-lulubug-sage flex items-center justify-center border-4 border-lulubug-green/10">
-                <span className="font-display text-5xl font-bold text-lulubug-green/20">?</span>
+              <div className="w-64 h-64 shrink-0 rounded-[2rem] overflow-hidden border-4 border-lulubug-sage">
+                <img src={teamPhoto} alt="The Lulubug's Garden executive producer team" className="w-full h-full object-cover" />
               </div>
               <div>
                 <h3 className="font-display text-4xl font-bold text-lulubug-green mb-2">Executive Producers</h3>

@@ -1,6 +1,9 @@
 import { Shell } from "@/components/shell";
 import { Button } from "@/components/ui/button";
-import lulubugPhoto from "@/assets/reference/lulubug-photo.jpg";
+import lulubugPhoto from "@/assets/reference/lulubug-closeup.jpg";
+import curbyPhoto from "@/assets/reference/curby.jpg";
+import sterlingPhoto from "@/assets/reference/sterling.jpg";
+import feelingsFlowerPhoto from "@/assets/reference/feelings-flower.png";
 
 const FRIENDS_DATA = [
   {
@@ -10,12 +13,12 @@ const FRIENDS_DATA = [
   },
   {
     name: "Curby",
-    image: null,
+    image: curbyPhoto,
     bio: "Curby is a fun, food-loving caterpillar who brings big energy to everything he does. He's curious, enthusiastic, and loves diving into whatever captures his imagination. Sometimes that excitement can turn into moments of carelessness or impatience when things don't go the way he expected."
   },
   {
     name: "Sterling",
-    image: null,
+    image: sterlingPhoto,
     bio: "Sterling is thoughtful and observant, often taking a moment to observe and understand what's happening before jumping in. He likes to ask questions and think things through, helping the group see situations from different perspectives. When emotions start to feel big or confusing, Sterling's steady nature helps everyone slow down and make sense of what's going on."
   },
   {
@@ -30,7 +33,7 @@ const FRIENDS_DATA = [
   },
   {
     name: "Feelings Flower",
-    image: null,
+    image: feelingsFlowerPhoto,
     bio: "The Feelings Flower helps kids recognize and name their emotions with colorful petals that represent different feelings. It's a fun way to learn that all emotions are okay—and that understanding how we feel is the first step to building the tools to handle any feeling that comes."
   }
 ];
@@ -52,7 +55,7 @@ export default function Friends() {
               <div key={friend.name} className="bg-white rounded-[3rem] p-8 border-4 border-lulubug-green/10 shadow-xl flex flex-col gap-6">
                 <div className="w-full aspect-square rounded-[2rem] bg-lulubug-cream border-4 border-lulubug-sage overflow-hidden flex-shrink-0">
                   {friend.image ? (
-                    <img src={friend.image} alt={friend.name} className="w-full h-full object-cover" />
+                    <img src={friend.image} alt={friend.name} className="w-full h-full object-contain" />
                   ) : (
                     <div className="w-full h-full flex flex-col items-center justify-center text-lulubug-green/20">
                       <span className="font-display text-6xl font-bold mb-2">?</span>

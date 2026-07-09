@@ -1,17 +1,20 @@
 import { Shell } from "@/components/shell";
 import { EmailCapture } from "@/components/email-capture";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/reference/hero-portal.jpg";
-import lulubugPhoto from "@/assets/reference/lulubug-photo.jpg";
+import heroImage from "@/assets/reference/set-photo.jpg";
+import lulubugPhoto from "@/assets/reference/lulubug-closeup.jpg";
+import curbyPhoto from "@/assets/reference/curby.jpg";
+import sterlingPhoto from "@/assets/reference/sterling.jpg";
+import feelingsFlowerPhoto from "@/assets/reference/feelings-flower.png";
 import { Link } from "wouter";
 
 const FRIENDS = [
   { name: "Lulubug", image: lulubugPhoto },
-  { name: "Curby", image: "" },
-  { name: "Sterling", image: "" },
+  { name: "Curby", image: curbyPhoto },
+  { name: "Sterling", image: sterlingPhoto },
   { name: "Daisy", image: "" },
   { name: "Willow", image: "" },
-  { name: "Feelings Flower", image: "" },
+  { name: "Feelings Flower", image: feelingsFlowerPhoto },
 ];
 
 export default function Home() {
@@ -26,7 +29,7 @@ export default function Home() {
           </h1>
           
           <div className="relative w-full max-w-4xl mx-auto rounded-[3rem] overflow-hidden border-8 border-white shadow-2xl mb-12 aspect-video bg-lulubug-sage flex items-center justify-center">
-            <img src={heroImage} alt="The Garden Portal" className="w-full h-full object-cover" />
+            <img src={heroImage} alt="Lulubug and Curby with the Garden hosts on set" className="w-full h-full object-cover" />
           </div>
           
           <a href="https://www.youtube.com/@LulubugsGarden" target="_blank" rel="noopener noreferrer">
@@ -52,7 +55,7 @@ export default function Home() {
               <Link key={friend.name} href="/friends" className="group flex flex-col items-center gap-4">
                 <div className="w-full aspect-square rounded-[2rem] bg-white border-4 border-lulubug-green/10 overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-300">
                   {friend.image ? (
-                    <img src={friend.image} alt={friend.name} className="w-full h-full object-cover" />
+                    <img src={friend.image} alt={friend.name} className="w-full h-full object-contain" />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center text-lulubug-green/20 font-display text-4xl font-bold">
                       ?
