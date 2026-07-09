@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, ExternalLink, Youtube, Headphones } from 'lucide-react';
+import { Phone, ExternalLink, Youtube } from 'lucide-react';
 import hmhfLogo from '../assets/reference/hmhf-logo.png';
 import hmhiLogo from '../assets/reference/hmhi-logo.png';
 import {
@@ -217,31 +217,41 @@ export function MentalHealthMatters() {
           </div>
 
           {/* Podcast for parents resource */}
-          <div className="mt-16 bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-[#2A4B3A]/10">
-            <div className="flex flex-col md:flex-row gap-10 items-start">
-              <div className="w-full md:w-1/3 shrink-0">
-                <div className="w-full aspect-[3/2] bg-[#2A4B3A] rounded-[1.5rem] flex items-center justify-center">
-                  <Headphones size={64} className="text-[#9AD6B3]" />
+          <div className="mt-16">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#2A4B3A] text-center mb-8">
+              Lulubug's Podcast
+            </h2>
+            <div className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-[#2A4B3A]/10">
+              <div className="flex flex-col md:flex-row gap-10 items-start">
+                <div className="w-full md:w-1/3 shrink-0">
+                  <div className="w-full aspect-video rounded-2xl overflow-hidden bg-[#F4F9F6]">
+                    <iframe
+                      className="w-full h-full"
+                      src="https://www.youtube.com/embed/X6MP1-sWncs"
+                      title="Meet Your Hosts: Jil & Karen Introduce the Show | Lulubug's Podcast for Parents"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      loading="lazy"
+                    />
+                  </div>
                 </div>
-              </div>
-              <div className="flex-1">
-                <span className="inline-block text-xs font-bold uppercase tracking-wider text-[#4A7C5A] bg-[#9AD6B3]/30 px-3 py-1 rounded-full mb-4">
-                  Coming Soon
-                </span>
-                <h2 className="font-serif text-3xl font-bold text-[#2A4B3A] mb-4">
-                  The Lulubug's Garden Podcast for Parents
-                </h2>
-                <p className="text-[#3A5C4A] leading-relaxed mb-6">
-                  Want to go deeper on the topics your child is exploring in the garden? Our upcoming podcast for parents will unpack each episode's emotional themes with practical, real-world conversation starters, so you can keep the mental health moment going long after the screen turns off.
-                </p>
-                <a
-                  href="https://www.lulubugsgarden.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-[#2A4B3A] font-bold border-b-2 border-[#9AD6B3] pb-1 hover:text-[#4A7C5A] hover:border-[#4A7C5A] transition-colors"
-                >
-                  Get Notified When It Launches <ExternalLink size={18} />
-                </a>
+                <div className="flex-1">
+                  <h3 className="font-serif text-3xl font-bold text-[#2A4B3A] mb-4">
+                    Lulubug's Podcast for Parents
+                  </h3>
+                  <p className="text-[#3A5C4A] leading-relaxed mb-6">
+                    Hosted by Jil & Karen, Lulubug's Podcast for Parents goes deeper on the topics your child explores in the garden — unpacking each episode's emotional themes with practical, real-world conversation starters, so you can keep the mental health moment going long after the screen turns off.
+                  </p>
+                  <a
+                    href="https://www.youtube.com/@LulubugsPodcastForParents"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-[#2A4B3A] text-white px-6 py-3 rounded-full font-bold hover:bg-[#3A5C4A] transition-colors"
+                  >
+                    <Youtube size={20} />
+                    Listen on YouTube
+                  </a>
+                </div>
               </div>
             </div>
           </div>
