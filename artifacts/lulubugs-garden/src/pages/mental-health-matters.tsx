@@ -12,19 +12,14 @@ import {
 
 const MENTAL_HEALTH_MOMENTS = [
   {
-    videoId: 'erLx5BxPHRo',
-    title: "When I Feel Helpful",
-    description: "Lulubug and friends explore what it feels like to lend a helping hand.",
+    videoId: '6GIyrZZbjWw',
+    title: "When Your Child Feels Proud",
+    description: "A gentle Mental Health Moment on helping kids recognize and celebrate feeling proud of themselves.",
   },
   {
-    videoId: 'ikEsYRr8J1w',
-    title: "When Life Gets Stressful, I Garden",
-    description: "A gentle Mental Health Moment on finding calm when everything feels like a lot.",
-  },
-  {
-    videoId: '5vGRz4wnhbk',
-    title: "A Moment Can Save a Life",
-    description: "A short, heartfelt reminder that reaching out and checking in truly matters.",
+    videoId: 'oR-yhDmR7_A',
+    title: "Helping Kids Feel Safe After Mistakes (Shame)",
+    description: "A caring look at how to help children move through shame and feel safe again after a mistake.",
   },
 ];
 
@@ -67,29 +62,12 @@ export function MentalHealthMatters() {
 
       <div className="pt-16 pb-24 px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-20">
-            <h1 className="font-serif text-5xl md:text-6xl font-bold text-[#2A4B3A] mb-8">
-              Mental Health Matters
-            </h1>
-            <div className="text-xl text-[#3A5C4A] leading-relaxed space-y-6 text-left md:text-center">
-              <p>
-                Here at Lulubug's Garden, we believe that a lifetime of healthy minds is possible for all of us. Our adventures in the garden are all rooted in building skills that foster positive mental health from a very early age. 
-              </p>
-              <p>
-                Learning to recognize and address feelings, making decisions about how to deal with negative emotions, and learning how to support each other, are all part of why we created Lulubug's Garden. We believe that mental health is part of our overall health.
-              </p>
-              <p>
-                We also know that there are many people who do not know where to turn for mental health support and treatment. By partnering with two innovative groups, we believe we can share correct principles with a non-threatening, de-stigmatizing approach.
-              </p>
-            </div>
-          </div>
-
           {/* Mental Health Moment video carousel */}
           <div className="mb-24">
             <div className="text-center mb-10">
-              <h2 className="font-serif text-4xl font-bold text-[#2A4B3A] mb-4">
+              <h1 className="font-serif text-4xl md:text-5xl font-bold text-[#2A4B3A] mb-4">
                 Mental Health Moments
-              </h2>
+              </h1>
               <p className="text-lg text-[#3A5C4A] max-w-2xl mx-auto">
                 Every episode of Lulubug's Garden includes a short Mental Health Moment. Watch a few of our favorites below, or visit{' '}
                 <a
@@ -147,6 +125,23 @@ export function MentalHealthMatters() {
                 <Youtube size={20} />
                 Watch more on YouTube
               </a>
+            </div>
+          </div>
+
+          <div className="text-center mb-20">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#2A4B3A] mb-8">
+              Mental Health Matters
+            </h2>
+            <div className="text-xl text-[#3A5C4A] leading-relaxed space-y-6 text-left md:text-center">
+              <p>
+                Here at Lulubug's Garden, we believe that a lifetime of healthy minds is possible for all of us. Our adventures in the garden are all rooted in building skills that foster positive mental health from a very early age. 
+              </p>
+              <p>
+                Learning to recognize and address feelings, making decisions about how to deal with negative emotions, and learning how to support each other, are all part of why we created Lulubug's Garden. We believe that mental health is part of our overall health.
+              </p>
+              <p>
+                We also know that there are many people who do not know where to turn for mental health support and treatment. By partnering with two innovative groups, we believe we can share correct principles with a non-threatening, de-stigmatizing approach.
+              </p>
             </div>
           </div>
 
