@@ -1,6 +1,7 @@
 import React from 'react';
 import { Phone, ExternalLink } from 'lucide-react';
-import { Placeholder } from '../components/ui/Placeholder';
+import hmhfLogo from '../assets/reference/hmhf-logo.png';
+import hmhiLogo from '../assets/reference/hmhi-logo.png';
 
 export function MentalHealthMatters() {
   return (
@@ -63,11 +64,13 @@ export function MentalHealthMatters() {
             <div className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-[#2A4B3A]/10">
               <div className="flex flex-col md:flex-row gap-10 items-start">
                 <div className="w-full md:w-1/3 shrink-0">
-                  <Placeholder 
-                    label="Huntsman Mental Health Foundation Logo" 
-                    shape="rounded"
-                    className="w-full aspect-[3/2] bg-[#F4F9F6] border-[#2A4B3A]/20"
-                  />
+                  <div className="w-full aspect-[3/2] bg-[#F4F9F6] border border-[#2A4B3A]/20 rounded-[1.5rem] flex items-center justify-center p-6">
+                    <img
+                      src={hmhfLogo}
+                      alt="Huntsman Family Foundation logo"
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
                 </div>
                 <div className="flex-1">
                   <h2 className="font-serif text-3xl font-bold text-[#2A4B3A] mb-4">
@@ -95,11 +98,13 @@ export function MentalHealthMatters() {
             <div className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-[#2A4B3A]/10">
               <div className="flex flex-col md:flex-row gap-10 items-start">
                 <div className="w-full md:w-1/3 shrink-0">
-                  <Placeholder 
-                    label="Huntsman Mental Health Institute Logo" 
-                    shape="rounded"
-                    className="w-full aspect-[3/2] bg-[#F4F9F6] border-[#2A4B3A]/20"
-                  />
+                  <div className="w-full aspect-[3/2] bg-[#F4F9F6] border border-[#2A4B3A]/20 rounded-[1.5rem] flex items-center justify-center p-6">
+                    <img
+                      src={hmhiLogo}
+                      alt="Huntsman Mental Health Institute logo"
+                      className="max-w-full max-h-full object-contain"
+                    />
+                  </div>
                 </div>
                 <div className="flex-1">
                   <h2 className="font-serif text-3xl font-bold text-[#2A4B3A] mb-4">
