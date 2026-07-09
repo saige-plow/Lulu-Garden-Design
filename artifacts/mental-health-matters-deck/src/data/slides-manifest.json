@@ -1,0 +1,42 @@
+[
+  {
+    "id": "b1f0b1a0-0001-4a00-8a00-000000000001",
+    "position": 1,
+    "filepath": "src/pages/slides/TitleSlide.tsx",
+    "title": "Mental Health Matters",
+    "description": "Title slide introducing the deck",
+    "speakerNotes": ""
+  },
+  {
+    "id": "b1f0b1a0-0002-4a00-8a00-000000000002",
+    "position": 2,
+    "filepath": "src/pages/slides/NeverAlone.tsx",
+    "title": "You're Never Alone",
+    "description": "Crisis support resources",
+    "speakerNotes": ""
+  },
+  {
+    "id": "b1f0b1a0-0003-4a00-8a00-000000000003",
+    "position": 3,
+    "filepath": "src/pages/slides/MentalHealthMoments.tsx",
+    "title": "Mental Health Moments",
+    "description": "Featured video moments from the show",
+    "speakerNotes": ""
+  },
+  {
+    "id": "b1f0b1a0-0004-4a00-8a00-000000000004",
+    "position": 4,
+    "filepath": "src/pages/slides/Partners.tsx",
+    "title": "Our Mental Health Partners",
+    "description": "Huntsman Mental Health Foundation and Institute",
+    "speakerNotes": ""
+  },
+  {
+    "id": "b1f0b1a0-0005-4a00-8a00-000000000005",
+    "position": 5,
+    "filepath": "src/pages/slides/Podcast.tsx",
+    "title": "Lulubug's Podcast for Parents",
+    "description": "Podcast resource for parents",
+    "speakerNotes": ""
+  }
+]

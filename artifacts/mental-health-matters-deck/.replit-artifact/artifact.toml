@@ -1,0 +1,27 @@
+kind = "slides"
+previewPath = "/mental-health-matters-deck/"
+title = "Mental Health Matters"
+version = "1.0.0"
+id = "artifacts/mental-health-matters-deck"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/mental-health-matters-deck/" ]
+localPort = 23167
+
+[services.development]
+run = "pnpm --filter @workspace/mental-health-matters-deck run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mental-health-matters-deck", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/mental-health-matters-deck/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23167"
+BASE_PATH = "/mental-health-matters-deck/"
