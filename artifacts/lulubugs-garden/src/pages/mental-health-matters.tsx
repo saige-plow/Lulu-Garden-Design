@@ -84,6 +84,72 @@ export function MentalHealthMatters() {
             </div>
           </div>
 
+          {/* Mental Health Moment video carousel */}
+          <div className="mb-24">
+            <div className="text-center mb-10">
+              <h2 className="font-serif text-4xl font-bold text-[#2A4B3A] mb-4">
+                Mental Health Moments
+              </h2>
+              <p className="text-lg text-[#3A5C4A] max-w-2xl mx-auto">
+                Every episode of Lulubug's Garden includes a short Mental Health Moment. Watch a few of our favorites below, or visit{' '}
+                <a
+                  href="https://www.youtube.com/@lulubugsgarden"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold underline underline-offset-4 hover:text-[#4A7C5A]"
+                >
+                  @lulubugsgarden
+                </a>{' '}
+                on YouTube for the full collection.
+              </p>
+            </div>
+
+            <Carousel
+              opts={{ align: 'start', loop: true }}
+              className="max-w-4xl mx-auto"
+              aria-label="Mental Health Moment video carousel"
+            >
+              <CarouselContent>
+                {MENTAL_HEALTH_MOMENTS.map((moment) => (
+                  <CarouselItem key={moment.videoId} className="md:basis-1/2 lg:basis-1/2">
+                    <div className="bg-white rounded-[2rem] p-4 shadow-sm border border-[#2A4B3A]/10 h-full flex flex-col">
+                      <div className="w-full aspect-video rounded-2xl overflow-hidden bg-[#F4F9F6]">
+                        <iframe
+                          className="w-full h-full"
+                          src={`https://www.youtube.com/embed/${moment.videoId}`}
+                          title={moment.title}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          loading="lazy"
+                        />
+                      </div>
+                      <div className="pt-4 px-2">
+                        <h3 className="font-serif text-xl font-bold text-[#2A4B3A] mb-1">
+                          {moment.title}
+                        </h3>
+                        <p className="text-sm text-[#3A5C4A]/80">{moment.description}</p>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="border-[#2A4B3A]/20 text-[#2A4B3A]" />
+              <CarouselNext className="border-[#2A4B3A]/20 text-[#2A4B3A]" />
+            </Carousel>
+
+            <div className="text-center mt-8">
+              <a
+                href="https://www.youtube.com/@lulubugsgarden"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#2A4B3A] font-bold border-b-2 border-[#9AD6B3] pb-1 hover:text-[#4A7C5A] hover:border-[#4A7C5A] transition-colors"
+              >
+                <Youtube size={20} />
+                Watch more on YouTube
+              </a>
+            </div>
+          </div>
+
           <div className="space-y-16">
             {/* Huntsman Foundation */}
             <div className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-[#2A4B3A]/10">
@@ -155,74 +221,8 @@ export function MentalHealthMatters() {
 
           </div>
 
-          {/* Mental Health Moment video carousel */}
-          <div className="mt-24">
-            <div className="text-center mb-10">
-              <h2 className="font-serif text-4xl font-bold text-[#2A4B3A] mb-4">
-                Mental Health Moments
-              </h2>
-              <p className="text-lg text-[#3A5C4A] max-w-2xl mx-auto">
-                Every episode of Lulubug's Garden includes a short Mental Health Moment. Watch a few of our favorites below, or visit{' '}
-                <a
-                  href="https://www.youtube.com/@lulubugsgarden"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-bold underline underline-offset-4 hover:text-[#4A7C5A]"
-                >
-                  @lulubugsgarden
-                </a>{' '}
-                on YouTube for the full collection.
-              </p>
-            </div>
-
-            <Carousel
-              opts={{ align: 'start', loop: true }}
-              className="max-w-4xl mx-auto"
-              aria-label="Mental Health Moment video carousel"
-            >
-              <CarouselContent>
-                {MENTAL_HEALTH_MOMENTS.map((moment) => (
-                  <CarouselItem key={moment.videoId} className="md:basis-1/2 lg:basis-1/2">
-                    <div className="bg-white rounded-[2rem] p-4 shadow-sm border border-[#2A4B3A]/10 h-full flex flex-col">
-                      <div className="w-full aspect-video rounded-2xl overflow-hidden bg-[#F4F9F6]">
-                        <iframe
-                          className="w-full h-full"
-                          src={`https://www.youtube.com/embed/${moment.videoId}`}
-                          title={moment.title}
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                          loading="lazy"
-                        />
-                      </div>
-                      <div className="pt-4 px-2">
-                        <h3 className="font-serif text-xl font-bold text-[#2A4B3A] mb-1">
-                          {moment.title}
-                        </h3>
-                        <p className="text-sm text-[#3A5C4A]/80">{moment.description}</p>
-                      </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="border-[#2A4B3A]/20 text-[#2A4B3A]" />
-              <CarouselNext className="border-[#2A4B3A]/20 text-[#2A4B3A]" />
-            </Carousel>
-
-            <div className="text-center mt-8">
-              <a
-                href="https://www.youtube.com/@lulubugsgarden"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#2A4B3A] font-bold border-b-2 border-[#9AD6B3] pb-1 hover:text-[#4A7C5A] hover:border-[#4A7C5A] transition-colors"
-              >
-                <Youtube size={20} />
-                Watch more on YouTube
-              </a>
-            </div>
-          </div>
-
           {/* Podcast for parents resource */}
-          <div className="mt-24 bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-[#2A4B3A]/10">
+          <div className="mt-16 bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-[#2A4B3A]/10">
             <div className="flex flex-col md:flex-row gap-10 items-start">
               <div className="w-full md:w-1/3 shrink-0">
                 <div className="w-full aspect-[3/2] bg-[#2A4B3A] rounded-[1.5rem] flex items-center justify-center">
