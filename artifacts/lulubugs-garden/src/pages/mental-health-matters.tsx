@@ -1,7 +1,32 @@
 import React from 'react';
-import { Phone, ExternalLink } from 'lucide-react';
+import { Phone, ExternalLink, Youtube, Headphones } from 'lucide-react';
 import hmhfLogo from '../assets/reference/hmhf-logo.png';
 import hmhiLogo from '../assets/reference/hmhi-logo.png';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
+
+const MENTAL_HEALTH_MOMENTS = [
+  {
+    videoId: 'erLx5BxPHRo',
+    title: "When I Feel Helpful",
+    description: "Lulubug and friends explore what it feels like to lend a helping hand.",
+  },
+  {
+    videoId: 'ikEsYRr8J1w',
+    title: "When Life Gets Stressful, I Garden",
+    description: "A gentle Mental Health Moment on finding calm when everything feels like a lot.",
+  },
+  {
+    videoId: '5vGRz4wnhbk',
+    title: "A Moment Can Save a Life",
+    description: "A short, heartfelt reminder that reaching out and checking in truly matters.",
+  },
+];
 
 export function MentalHealthMatters() {
   return (
@@ -128,6 +153,102 @@ export function MentalHealthMatters() {
               </div>
             </div>
 
+          </div>
+
+          {/* Mental Health Moment video carousel */}
+          <div className="mt-24">
+            <div className="text-center mb-10">
+              <h2 className="font-serif text-4xl font-bold text-[#2A4B3A] mb-4">
+                Mental Health Moments
+              </h2>
+              <p className="text-lg text-[#3A5C4A] max-w-2xl mx-auto">
+                Every episode of Lulubug's Garden includes a short Mental Health Moment. Watch a few of our favorites below, or visit{' '}
+                <a
+                  href="https://www.youtube.com/@lulubugsgarden"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold underline underline-offset-4 hover:text-[#4A7C5A]"
+                >
+                  @lulubugsgarden
+                </a>{' '}
+                on YouTube for the full collection.
+              </p>
+            </div>
+
+            <Carousel
+              opts={{ align: 'start', loop: true }}
+              className="max-w-4xl mx-auto"
+              aria-label="Mental Health Moment video carousel"
+            >
+              <CarouselContent>
+                {MENTAL_HEALTH_MOMENTS.map((moment) => (
+                  <CarouselItem key={moment.videoId} className="md:basis-1/2 lg:basis-1/2">
+                    <div className="bg-white rounded-[2rem] p-4 shadow-sm border border-[#2A4B3A]/10 h-full flex flex-col">
+                      <div className="w-full aspect-video rounded-2xl overflow-hidden bg-[#F4F9F6]">
+                        <iframe
+                          className="w-full h-full"
+                          src={`https://www.youtube.com/embed/${moment.videoId}`}
+                          title={moment.title}
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                          loading="lazy"
+                        />
+                      </div>
+                      <div className="pt-4 px-2">
+                        <h3 className="font-serif text-xl font-bold text-[#2A4B3A] mb-1">
+                          {moment.title}
+                        </h3>
+                        <p className="text-sm text-[#3A5C4A]/80">{moment.description}</p>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="border-[#2A4B3A]/20 text-[#2A4B3A]" />
+              <CarouselNext className="border-[#2A4B3A]/20 text-[#2A4B3A]" />
+            </Carousel>
+
+            <div className="text-center mt-8">
+              <a
+                href="https://www.youtube.com/@lulubugsgarden"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#2A4B3A] font-bold border-b-2 border-[#9AD6B3] pb-1 hover:text-[#4A7C5A] hover:border-[#4A7C5A] transition-colors"
+              >
+                <Youtube size={20} />
+                Watch more on YouTube
+              </a>
+            </div>
+          </div>
+
+          {/* Podcast for parents resource */}
+          <div className="mt-24 bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-[#2A4B3A]/10">
+            <div className="flex flex-col md:flex-row gap-10 items-start">
+              <div className="w-full md:w-1/3 shrink-0">
+                <div className="w-full aspect-[3/2] bg-[#2A4B3A] rounded-[1.5rem] flex items-center justify-center">
+                  <Headphones size={64} className="text-[#9AD6B3]" />
+                </div>
+              </div>
+              <div className="flex-1">
+                <span className="inline-block text-xs font-bold uppercase tracking-wider text-[#4A7C5A] bg-[#9AD6B3]/30 px-3 py-1 rounded-full mb-4">
+                  Coming Soon
+                </span>
+                <h2 className="font-serif text-3xl font-bold text-[#2A4B3A] mb-4">
+                  The Lulubug's Garden Podcast for Parents
+                </h2>
+                <p className="text-[#3A5C4A] leading-relaxed mb-6">
+                  Want to go deeper on the topics your child is exploring in the garden? Our upcoming podcast for parents will unpack each episode's emotional themes with practical, real-world conversation starters, so you can keep the mental health moment going long after the screen turns off.
+                </p>
+                <a
+                  href="https://www.lulubugsgarden.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-[#2A4B3A] font-bold border-b-2 border-[#9AD6B3] pb-1 hover:text-[#4A7C5A] hover:border-[#4A7C5A] transition-colors"
+                >
+                  Get Notified When It Launches <ExternalLink size={18} />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
