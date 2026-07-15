@@ -53,12 +53,12 @@ export function Footer() {
             <ul className="space-y-3">
               <li>
                 <a href="https://huntsmanmentalhealthfoundation.org/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors inline-flex items-center gap-1.5">
-                  HMHF <ExternalLink size={13} />
+                  Huntsman Mental Health Foundation <ExternalLink size={13} />
                 </a>
               </li>
               <li>
                 <a href="https://healthcare.utah.edu/hmhi" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors inline-flex items-center gap-1.5">
-                  HMHI <ExternalLink size={13} />
+                  Huntsman Mental Health Institute <ExternalLink size={13} />
                 </a>
               </li>
             </ul>
