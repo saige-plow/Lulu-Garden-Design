@@ -1,6 +1,6 @@
 import React from 'react';
 import { Placeholder } from '../components/ui/Placeholder';
-import gardenIllustration from '../assets/reference/garden-illustration.jpeg';
+import bgRoseGarden from '../assets/reference/bg-rose-garden.png';
 import jilPhoto from '../assets/reference/jil.jpg';
 import teamPhoto from '../assets/reference/team.jpg';
 
@@ -53,8 +53,8 @@ export function About() {
           </p>
           <div className="mt-12 flex justify-center">
             <img
-              src={gardenIllustration}
-              alt="Illustrated view of Lulubug's Garden"
+              src={bgRoseGarden}
+              alt="Lulubug's Garden — rose garden scene"
               className="blob-shape w-full max-w-2xl aspect-video object-cover shadow-xl"
             />
           </div>
@@ -69,7 +69,7 @@ export function About() {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
-            {team.map((member, index) => (
+            {team.map((member) => (
               <div key={member.name} className="flex flex-col sm:flex-row gap-8 items-start">
                 <div className="shrink-0 w-full sm:w-auto flex justify-center">
                   {member.photo ? (

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Placeholder } from '../components/ui/Placeholder';
-import lulubugPhoto from '../assets/reference/lulubug-closeup.jpg';
-import curbyPhoto from '../assets/reference/curby.jpg';
-import sterlingPhoto from '../assets/reference/sterling.jpg';
+import luluIllustrated from '../assets/reference/lulu-illustrated.png';
+import curbyIllustrated from '../assets/reference/curby-illustrated.png';
+import sterlingIllustrated from '../assets/reference/sterling-illustrated.png';
 import feelingsFlowerPhoto from '../assets/reference/feelings-flower.png';
 
 export function Friends() {
@@ -13,7 +13,7 @@ export function Friends() {
       description: "Lulubug is the heart of the Garden and often helps guide her friends through new experiences. She loves organizing, making lists, and drawing with the children who visit her garden. When things don't go as planned, she learns how to move from frustrated to brave and try again.",
       color: "secondary",
       shape: "blob-1" as const,
-      photo: lulubugPhoto
+      photo: luluIllustrated
     },
     {
       name: "Curby",
@@ -21,7 +21,7 @@ export function Friends() {
       description: "Curby is a fun, food-loving caterpillar who brings big energy to everything he does. He's curious, enthusiastic, and loves diving into whatever captures his imagination. Sometimes that excitement can turn into moments of carelessness or impatience when things don't go the way he expected.",
       color: "primary",
       shape: "blob-2" as const,
-      photo: curbyPhoto
+      photo: curbyIllustrated
     },
     {
       name: "Sterling",
@@ -29,7 +29,7 @@ export function Friends() {
       description: "Sterling is thoughtful and observant, often taking a moment to understand what's happening before jumping in. He likes to ask questions and think things through, helping the group see situations from different perspectives. When emotions start to feel big or confusing, Sterling's steady nature helps everyone slow down and make sense of what's going on.",
       color: "accent",
       shape: "blob-3" as const,
-      photo: sterlingPhoto
+      photo: sterlingIllustrated
     },
     {
       name: "Daisy",
@@ -71,7 +71,7 @@ export function Friends() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {friends.map((friend, index) => (
+          {friends.map((friend) => (
             <div 
               key={friend.name} 
               className="flex flex-col bg-white rounded-[2.5rem] p-8 shadow-sm border border-border hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
@@ -81,7 +81,7 @@ export function Friends() {
                   <img
                     src={friend.photo}
                     alt={friend.name}
-                    className={`w-48 h-48 object-contain bg-white group-hover:scale-105 transition-transform duration-500 ${friend.shape === 'circle' ? 'rounded-full' : friend.shape === 'blob-1' ? 'blob-shape' : friend.shape === 'blob-2' ? 'blob-shape-2' : 'blob-shape-3'}`}
+                    className="w-48 h-48 object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                 ) : (
                   <Placeholder 

@@ -42,9 +42,9 @@ export default function TitleSlide() {
           <div className="flex-1 flex items-center justify-center">
             <div className="w-[30vw] h-[30vw] rounded-full bg-[#F4F9F6] border-[0.3vw] border-white shadow-sm flex items-center justify-center overflow-hidden">
               <img
-                src={`${base}photos/curby-lulubug.jpg`}
+                src={`${base}photos/lulu-illustrated.png`}
                 crossOrigin="anonymous"
-                alt="Curby and Lulubug"
+                alt="Lulubug illustrated"
                 className="w-full h-full object-cover"
               />
             </div>
