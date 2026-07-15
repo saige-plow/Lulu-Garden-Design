@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Phone, ExternalLink, Youtube } from 'lucide-react';
 import hmhfLogo from '../assets/reference/hmhf-logo.png';
 import hmhiLogo from '../assets/reference/hmhi-logo.png';
@@ -24,6 +24,12 @@ const MENTAL_HEALTH_MOMENTS = [
 ];
 
 export function MentalHealthMatters() {
+  useEffect(() => {
+    const prev = document.title;
+    document.title = 'Why Mental Health? | Lulubug\'s Garden';
+    return () => { document.title = prev; };
+  }, []);
+
   return (
     <div className="w-full bg-[#E8EFEA] min-h-screen">
       {/* 
@@ -62,6 +68,25 @@ export function MentalHealthMatters() {
 
       <div className="pt-16 pb-24 px-4">
         <div className="max-w-4xl mx-auto">
+
+          {/* Why Mental Health? — moved above the carousel */}
+          <div className="text-center mb-20">
+            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#2A4B3A] mb-8">
+              Why Mental Health?
+            </h2>
+            <div className="text-xl text-[#3A5C4A] leading-relaxed space-y-6 text-left md:text-center">
+              <p>
+                Here at Lulubug's Garden, we believe that a lifetime of healthy minds is possible for all of us. Our adventures in the garden are all rooted in building skills that foster positive mental health from a very early age. 
+              </p>
+              <p>
+                Learning to recognize and address feelings, making decisions about how to deal with negative emotions, and learning how to support each other, are all part of why we created Lulubug's Garden. We believe that mental health is part of our overall health.
+              </p>
+              <p>
+                We also know that there are many people who do not know where to turn for mental health support and treatment. By partnering with two innovative groups, we believe we can share correct principles with a non-threatening, de-stigmatizing approach.
+              </p>
+            </div>
+          </div>
+
           {/* Mental Health Moment video carousel */}
           <div className="mb-24">
             <div className="text-center mb-10">
@@ -125,23 +150,6 @@ export function MentalHealthMatters() {
                 <Youtube size={20} />
                 Watch more on YouTube
               </a>
-            </div>
-          </div>
-
-          <div className="text-center mb-20">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#2A4B3A] mb-8">
-              Mental Health Matters
-            </h2>
-            <div className="text-xl text-[#3A5C4A] leading-relaxed space-y-6 text-left md:text-center">
-              <p>
-                Here at Lulubug's Garden, we believe that a lifetime of healthy minds is possible for all of us. Our adventures in the garden are all rooted in building skills that foster positive mental health from a very early age. 
-              </p>
-              <p>
-                Learning to recognize and address feelings, making decisions about how to deal with negative emotions, and learning how to support each other, are all part of why we created Lulubug's Garden. We believe that mental health is part of our overall health.
-              </p>
-              <p>
-                We also know that there are many people who do not know where to turn for mental health support and treatment. By partnering with two innovative groups, we believe we can share correct principles with a non-threatening, de-stigmatizing approach.
-              </p>
             </div>
           </div>
 

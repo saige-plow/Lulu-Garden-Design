@@ -11,7 +11,7 @@ export function Navbar() {
     { href: '/', label: 'Home' },
     { href: '/friends', label: 'Meet Garden Friends' },
     { href: '/about', label: 'About Us' },
-    { href: '/mental-health-matters', label: 'Mental Health Matters' },
+    { href: '/mental-health-matters', label: 'Why Mental Health?' },
     { href: '/press', label: 'Press' },
     { href: '/contact', label: 'Contact' },
   ];

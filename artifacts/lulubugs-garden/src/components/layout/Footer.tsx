@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'wouter';
-import { Youtube, Instagram, Facebook } from 'lucide-react';
+import { Youtube, Instagram, Facebook, ExternalLink } from 'lucide-react';
 import { FaTiktok } from 'react-icons/fa';
 
 export function Footer() {
@@ -16,7 +16,7 @@ export function Footer() {
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
           <div className="col-span-1 md:col-span-2">
             <h3 className="font-serif text-3xl font-bold mb-4">Lulubug's Garden</h3>
             <p className="text-primary-foreground/80 max-w-md mb-8 text-lg">
@@ -44,10 +44,26 @@ export function Footer() {
               <li><Link href="/" className="hover:text-accent transition-colors">Home</Link></li>
               <li><Link href="/friends" className="hover:text-accent transition-colors">Meet the Friends</Link></li>
               <li><Link href="/about" className="hover:text-accent transition-colors">About Us</Link></li>
-              <li><Link href="/mental-health-matters" className="hover:text-accent transition-colors">Mental Health Matters</Link></li>
+              <li><Link href="/mental-health-matters" className="hover:text-accent transition-colors">Why Mental Health?</Link></li>
             </ul>
           </div>
           
+          <div>
+            <h4 className="font-bold text-lg mb-4 text-accent">Our Partners</h4>
+            <ul className="space-y-3">
+              <li>
+                <a href="https://huntsmanmentalhealthfoundation.org/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors inline-flex items-center gap-1.5">
+                  HMHF <ExternalLink size={13} />
+                </a>
+              </li>
+              <li>
+                <a href="https://healthcare.utah.edu/hmhi" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors inline-flex items-center gap-1.5">
+                  HMHI <ExternalLink size={13} />
+                </a>
+              </li>
+            </ul>
+          </div>
+
           <div>
             <h4 className="font-bold text-lg mb-4 text-accent">Connect</h4>
             <ul className="space-y-3">
