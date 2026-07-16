@@ -1,6 +1,5 @@
 import React from 'react';
 import { Download, Mail } from 'lucide-react';
-import { Placeholder } from '../components/ui/Placeholder';
 
 export function Press() {
   return (
@@ -33,24 +32,12 @@ export function Press() {
 
             <section>
               <h2 className="font-display text-3xl font-bold mb-6 text-foreground">In the News</h2>
-              <div className="space-y-6">
-                {/* Placeholder news items */}
-                {[1, 2].map((item) => (
-                  <div key={item} className="flex flex-col sm:flex-row gap-6 items-start p-6 rounded-3xl hover:bg-background transition-colors border border-transparent hover:border-border">
-                    <div className="w-full sm:w-48 shrink-0">
-                      <Placeholder label="Article Image" className="w-full aspect-video" />
-                    </div>
-                    <div>
-                      <span className="text-sm font-bold text-secondary uppercase tracking-wider">Coming Soon</span>
-                      <h3 className="font-display text-xl font-bold mt-2 mb-3">
-                        [Placeholder headline for future press mentions]
-                      </h3>
-                      <p className="text-foreground/70 text-sm">
-                        As Lulubug's Garden prepares for launch, we'll update this section with features, reviews, and interviews.
-                      </p>
-                    </div>
-                  </div>
-                ))}
+              <div className="flex flex-col items-center justify-center py-14 rounded-3xl bg-background border border-border text-center gap-3">
+                <span className="text-4xl">🌸</span>
+                <p className="font-display text-xl font-bold text-foreground/70">Coverage coming soon</p>
+                <p className="text-foreground/50 text-sm max-w-xs">
+                  As Lulubug's Garden prepares for launch, we'll update this section with features, reviews, and interviews.
+                </p>
               </div>
             </section>
 

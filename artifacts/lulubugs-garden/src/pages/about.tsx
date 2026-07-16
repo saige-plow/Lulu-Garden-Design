@@ -1,5 +1,4 @@
 import React from 'react';
-import { Placeholder } from '../components/ui/Placeholder';
 import bgRoseGarden from '../assets/reference/bg-rose-garden.png';
 import jilPhoto from '../assets/reference/jil.jpg';
 import teamPhoto from '../assets/reference/team.jpg';
@@ -79,12 +78,14 @@ export function About() {
                       className="w-40 h-40 rounded-full object-cover shadow-md"
                     />
                   ) : (
-                    <Placeholder 
-                      label={member.name} 
-                      shape="circle"
-                      color={member.color as any}
-                      className="w-40 h-40 shadow-md"
-                    />
+                    <div className={`w-40 h-40 rounded-full flex items-center justify-center shadow-md text-3xl font-display font-bold ${
+                      member.color === 'primary' ? 'bg-primary/10 text-primary' :
+                      member.color === 'secondary' ? 'bg-secondary/10 text-secondary' :
+                      member.color === 'accent' ? 'bg-accent/20 text-foreground' :
+                      'bg-muted text-muted-foreground'
+                    }`}>
+                      {member.name.split(' ').map(w => w[0]).join('')}
+                    </div>
                   )}
                 </div>
                 <div>

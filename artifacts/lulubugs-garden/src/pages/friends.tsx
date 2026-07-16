@@ -84,12 +84,13 @@ export function Friends() {
                     className="w-48 h-48 object-contain group-hover:scale-105 transition-transform duration-500"
                   />
                 ) : (
-                  <Placeholder 
-                    label={friend.name} 
-                    shape={friend.shape}
-                    color={friend.color as any}
-                    className="w-48 h-48 group-hover:scale-105 transition-transform duration-500"
-                  />
+                  <div className={`w-48 h-48 flex flex-col items-center justify-center group-hover:scale-105 transition-transform duration-500 ${
+                    friend.color === 'accent' ? 'bg-accent/20' : friend.color === 'primary' ? 'bg-primary/10' : 'bg-secondary/10'
+                  } rounded-full`}>
+                    <span className="text-4xl mb-2">🌱</span>
+                    <span className="font-display font-bold text-lg text-foreground/70">{friend.name}</span>
+                    <span className="text-xs font-bold uppercase tracking-widest text-muted-foreground mt-1">Coming Soon</span>
+                  </div>
                 )}
               </div>
               <div className="text-center flex-1 flex flex-col">
