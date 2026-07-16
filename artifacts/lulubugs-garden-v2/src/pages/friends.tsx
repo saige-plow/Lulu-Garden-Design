@@ -61,7 +61,7 @@ export function Friends() {
     <div className="w-full pt-12 pb-24 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-20">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-6">
+          <h1 className="font-display text-5xl md:text-6xl font-bold text-primary mb-6">
             Meet the Garden Friends
           </h1>
           <p className="text-xl text-foreground/80 font-medium leading-relaxed">
@@ -93,7 +93,7 @@ export function Friends() {
                 )}
               </div>
               <div className="text-center flex-1 flex flex-col">
-                <h3 className="font-serif text-3xl font-bold text-foreground mb-2">{friend.name}</h3>
+                <h3 className="font-display text-3xl font-bold text-foreground mb-2">{friend.name}</h3>
                 <span className="inline-block text-sm font-bold uppercase tracking-wider text-muted-foreground mb-6">
                   {friend.role}
                 </span>

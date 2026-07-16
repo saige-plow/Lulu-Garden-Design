@@ -42,10 +42,10 @@ export function About() {
       <section className="pt-16 pb-24 px-4 bg-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-8">
+          <h1 className="font-display text-5xl md:text-6xl font-bold text-primary mb-8">
             Why we planted this garden
           </h1>
-          <p className="text-2xl md:text-3xl font-serif text-foreground/90 leading-normal mb-8">
+          <p className="text-2xl md:text-3xl font-display text-foreground/90 leading-normal mb-8">
             We nurture self-awareness, empathy, resilience, and curiosity — through joyful storytelling and interactive play that helps children grow.
           </p>
           <p className="text-xl text-secondary font-bold">
@@ -64,7 +64,7 @@ export function About() {
       {/* Team Section */}
       <section className="py-24 px-4 bg-background">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-center mb-16 text-foreground">
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-center mb-16 text-foreground">
             Meet the team
           </h2>
           
@@ -88,7 +88,7 @@ export function About() {
                   )}
                 </div>
                 <div>
-                  <h3 className="font-serif text-2xl font-bold text-foreground mb-1">{member.name}</h3>
+                  <h3 className="font-display text-2xl font-bold text-foreground mb-1">{member.name}</h3>
                   <span className="inline-block text-sm font-bold uppercase tracking-wider text-muted-foreground mb-4">
                     {member.role}
                   </span>

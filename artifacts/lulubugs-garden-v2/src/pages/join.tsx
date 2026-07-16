@@ -18,7 +18,7 @@ export function Join() {
             <Mail size={40} />
           </div>
           
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-4">
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-primary mb-4">
             Join the Garden Club
           </h1>
           

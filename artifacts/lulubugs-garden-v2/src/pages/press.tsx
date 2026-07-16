@@ -7,7 +7,7 @@ export function Press() {
     <div className="w-full pt-16 pb-24 px-4 bg-white">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-20">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold text-primary mb-6">
+          <h1 className="font-display text-5xl md:text-6xl font-bold text-primary mb-6">
             Press & Media
           </h1>
           <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
@@ -20,7 +20,7 @@ export function Press() {
           <div className="md:col-span-2 space-y-16">
             
             <section>
-              <h2 className="font-serif text-3xl font-bold mb-6 text-foreground">About the Show</h2>
+              <h2 className="font-display text-3xl font-bold mb-6 text-foreground">About the Show</h2>
               <div className="prose prose-lg text-foreground/80 bg-background p-8 rounded-3xl border border-border">
                 <p className="italic text-muted-foreground mb-4">
                   [Press boilerplate — add once approved]
@@ -32,7 +32,7 @@ export function Press() {
             </section>
 
             <section>
-              <h2 className="font-serif text-3xl font-bold mb-6 text-foreground">In the News</h2>
+              <h2 className="font-display text-3xl font-bold mb-6 text-foreground">In the News</h2>
               <div className="space-y-6">
                 {/* Placeholder news items */}
                 {[1, 2].map((item) => (
@@ -42,7 +42,7 @@ export function Press() {
                     </div>
                     <div>
                       <span className="text-sm font-bold text-secondary uppercase tracking-wider">Coming Soon</span>
-                      <h3 className="font-serif text-xl font-bold mt-2 mb-3">
+                      <h3 className="font-display text-xl font-bold mt-2 mb-3">
                         [Placeholder headline for future press mentions]
                       </h3>
                       <p className="text-foreground/70 text-sm">
@@ -60,7 +60,7 @@ export function Press() {
           <div className="space-y-8">
             
             <div className="bg-primary/5 rounded-3xl p-8 border border-primary/10">
-              <h3 className="font-serif text-2xl font-bold mb-6 text-primary">Media Assets</h3>
+              <h3 className="font-display text-2xl font-bold mb-6 text-primary">Media Assets</h3>
               <ul className="space-y-4">
                 <li>
                   <button className="flex items-center gap-3 w-full p-4 rounded-xl bg-white hover:bg-primary hover:text-white transition-colors border border-border shadow-sm group">
@@ -84,7 +84,7 @@ export function Press() {
             </div>
 
             <div className="bg-secondary/10 rounded-3xl p-8 border border-secondary/20">
-              <h3 className="font-serif text-2xl font-bold mb-4 text-foreground">Media Contact</h3>
+              <h3 className="font-display text-2xl font-bold mb-4 text-foreground">Media Contact</h3>
               <p className="text-foreground/80 mb-6 text-sm">
                 For interview requests, screeners, or additional assets, please reach out to our press team.
               </p>

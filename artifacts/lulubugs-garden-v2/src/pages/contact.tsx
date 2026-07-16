@@ -29,7 +29,7 @@ export function Contact() {
       <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-start">
         
         <div>
-          <h1 className="font-serif text-5xl font-bold text-primary mb-6">
+          <h1 className="font-display text-5xl font-bold text-primary mb-6">
             Say Hello
           </h1>
           <p className="text-xl text-foreground/80 mb-10 leading-relaxed">
@@ -60,7 +60,7 @@ export function Contact() {
               <div className="w-20 h-20 bg-secondary/10 text-secondary rounded-full flex items-center justify-center mx-auto mb-6">
                 <CheckCircle2 size={40} />
               </div>
-              <h2 className="font-serif text-3xl font-bold text-primary mb-4">Message Sent!</h2>
+              <h2 className="font-display text-3xl font-bold text-primary mb-4">Message Sent!</h2>
               <p className="text-foreground/70 mb-8">
                 Thank you for reaching out to the garden. We'll get back to you as soon as we can.
               </p>

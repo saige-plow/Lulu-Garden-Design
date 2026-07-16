@@ -16,7 +16,7 @@ const queryClient = new QueryClient();
 function NotFound() {
   return (
     <div className="min-h-[60vh] flex flex-col items-center justify-center text-center px-4">
-      <h1 className="font-serif text-5xl font-bold text-primary mb-4">Oh no!</h1>
+      <h1 className="font-display text-5xl font-bold text-primary mb-4">Oh no!</h1>
       <p className="text-xl text-muted-foreground mb-8">We couldn't find this part of the garden.</p>
       <a href="/" className="inline-flex items-center justify-center rounded-full bg-secondary px-8 py-3 text-white font-bold hover:bg-secondary/90 transition-transform hover:scale-105">
         Back to the Garden

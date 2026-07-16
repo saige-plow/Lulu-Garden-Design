@@ -43,7 +43,7 @@ export function Home() {
             <span className="inline-block py-1 px-3 rounded-full bg-secondary/10 text-secondary font-bold text-sm mb-6 tracking-wide uppercase">
               A New Series for Kids
             </span>
-            <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-bold text-primary leading-[1.1] mb-6">
+            <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-primary leading-[1.1] mb-6">
               Welcome to <br/>
               <span className="text-secondary">Lulubug's</span> Garden
             </h1>
@@ -99,7 +99,7 @@ export function Home() {
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6">Learning to grow, together.</h2>
+            <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">Learning to grow, together.</h2>
             <p className="text-xl text-primary-foreground/80">
               Join Lulubug and her friends as they navigate big feelings, learn empathy, and discover how to be brave.
             </p>
@@ -115,7 +115,7 @@ export function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <h3 className="font-serif text-xl font-bold mb-2 px-2">{card.label}</h3>
+                <h3 className="font-display text-xl font-bold mb-2 px-2">{card.label}</h3>
                 <p className="text-primary-foreground/70 px-2 pb-2 text-sm">{card.desc}</p>
               </div>
             ))}
@@ -146,7 +146,7 @@ export function Home() {
               className="h-24 object-contain"
             />
           </div>
-          <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-6">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
             Rooted in real mental health expertise.
           </h2>
           <p className="text-lg text-foreground/70 mb-10">
@@ -167,7 +167,7 @@ export function Home() {
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
         
         <div className="max-w-3xl mx-auto text-center relative z-10 bg-white/60 backdrop-blur-md p-10 md:p-16 rounded-[3rem] border border-white/50 shadow-xl">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-primary mb-6">
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-primary mb-6">
             Let's grow together
           </h2>
           <p className="text-lg text-foreground/80 mb-10">

@@ -25,7 +25,7 @@ export function Placeholder({ label, className = '', shape = 'rounded', color = 
 
   return (
     <div className={`flex flex-col items-center justify-center border-2 border-dashed p-6 text-center ${shapeClasses[shape]} ${colorClasses[color]} ${className}`}>
-      <span className="font-serif font-bold text-lg opacity-80">{label}</span>
+      <span className="font-display font-bold text-lg opacity-80">{label}</span>
       <span className="text-xs uppercase tracking-widest mt-2 opacity-50 font-bold">Image Needed</span>
     </div>
   );
