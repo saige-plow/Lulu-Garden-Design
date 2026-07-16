@@ -3,6 +3,8 @@ import { Placeholder } from '../components/ui/Placeholder';
 import luluIllustrated from '../assets/reference/lulu-illustrated.png';
 import curbyIllustrated from '../assets/reference/curby-illustrated.png';
 import sterlingIllustrated from '../assets/reference/sterling-illustrated.png';
+import daisyIllustrated from '../assets/reference/daisy-illustrated.png';
+import willowIllustrated from '../assets/reference/willow-illustrated.png';
 import feelingsFlowerPhoto from '../assets/reference/feelings-flower.png';
 
 export function Friends() {
@@ -37,7 +39,7 @@ export function Friends() {
       description: "Daisy loves to jump into every moment with excitement and laughter, bringing joy and energy to the group.",
       color: "accent",
       shape: "circle" as const,
-      photo: null
+      photo: daisyIllustrated
     },
     {
       name: "Willow",
@@ -45,7 +47,7 @@ export function Friends() {
       description: "Willow brings a quieter presence, helping friends pause, listen, and understand their feelings.",
       color: "primary",
       shape: "blob-1" as const,
-      photo: null
+      photo: willowIllustrated
     },
     {
       name: "Feelings Flower",
