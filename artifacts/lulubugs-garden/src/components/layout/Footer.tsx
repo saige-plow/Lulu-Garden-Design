@@ -3,7 +3,7 @@ import { Link } from 'wouter';
 import { Youtube, Instagram, Facebook, ExternalLink } from 'lucide-react';
 import { FaTiktok } from 'react-icons/fa';
 import hmhfLogo from '../../assets/reference/hmhf-logo.png';
-import hmhiLogo from '../../assets/reference/hmhi-horizontal.png';
+import hmhiLogo from '../../assets/reference/hmhi-stacked.png';
 
 export function Footer() {
   return (
@@ -57,7 +57,7 @@ export function Footer() {
                 <img src={hmhfLogo} alt="Huntsman Mental Health Foundation" className="h-10 w-auto object-contain brightness-0 invert" />
               </a>
               <a href="https://healthcare.utah.edu/hmhi" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
-                <img src={hmhiLogo} alt="Huntsman Mental Health Institute" className="h-10 w-auto object-contain brightness-0 invert" />
+                <img src={hmhiLogo} alt="Huntsman Mental Health Institute" className="h-16 w-auto object-contain brightness-0 invert" />
               </a>
             </div>
           </div>
