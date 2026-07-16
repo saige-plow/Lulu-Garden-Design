@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'wouter';
 import { Youtube, Instagram, Facebook, ExternalLink } from 'lucide-react';
 import { FaTiktok } from 'react-icons/fa';
+import hmhfLogo from '../../assets/reference/hmhf-logo.png';
+import hmhiLogo from '../../assets/reference/hmhi-horizontal.png';
 
 export function Footer() {
   return (
@@ -50,18 +52,14 @@ export function Footer() {
           
           <div>
             <h4 className="font-bold text-lg mb-4 text-accent">Our Partners</h4>
-            <ul className="space-y-3">
-              <li>
-                <a href="https://huntsmanmentalhealthfoundation.org/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors inline-flex items-center gap-1.5">
-                  Huntsman Mental Health Foundation <ExternalLink size={13} />
-                </a>
-              </li>
-              <li>
-                <a href="https://healthcare.utah.edu/hmhi" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors inline-flex items-center gap-1.5">
-                  Huntsman Mental Health Institute <ExternalLink size={13} />
-                </a>
-              </li>
-            </ul>
+            <div className="flex flex-col gap-4">
+              <a href="https://huntsmanmentalhealthfoundation.org/" target="_blank" rel="noopener noreferrer" className="block bg-white rounded-xl px-4 py-3 hover:opacity-90 transition-opacity w-fit">
+                <img src={hmhfLogo} alt="Huntsman Mental Health Foundation" className="h-10 w-auto object-contain" />
+              </a>
+              <a href="https://healthcare.utah.edu/hmhi" target="_blank" rel="noopener noreferrer" className="block bg-white rounded-xl px-4 py-3 hover:opacity-90 transition-opacity w-fit">
+                <img src={hmhiLogo} alt="Huntsman Mental Health Institute" className="h-10 w-auto object-contain" />
+              </a>
+            </div>
           </div>
 
           <div>
