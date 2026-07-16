@@ -71,11 +71,11 @@ export function MentalHealthMatters() {
             <div className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-[#2A4B3A]/10">
               <div className="flex flex-col md:flex-row gap-10 items-start">
                 <div className="w-full md:w-1/3 shrink-0">
-                  <div className="w-full aspect-[3/2] bg-[#F4F9F6] border border-[#2A4B3A]/20 rounded-[1.5rem] overflow-hidden">
+                  <div className="w-full aspect-[3/2] bg-[#F4F9F6] border border-[#2A4B3A]/20 rounded-[1.5rem] flex items-center justify-center p-8">
                     <img
                       src={hmhfLogo}
                       alt="Huntsman Family Foundation logo"
-                      className="w-full h-full object-contain"
+                      className="w-full h-auto object-contain"
                     />
                   </div>
                 </div>
@@ -230,46 +230,42 @@ export function MentalHealthMatters() {
                     Hosted by Jil & Karen, Lulubug's Podcast for Parents goes deeper on the topics your child explores in the garden — unpacking each episode's emotional themes with practical, real-world conversation starters, so you can keep the mental health moment going long after the screen turns off.
                   </p>
                   <p className="text-sm font-bold text-[#3A5C4A] mb-3 uppercase tracking-wider">Listen &amp; Follow</p>
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex gap-3">
                     <a
                       href="https://lulubugspodcastforparents.buzzsprout.com/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-[#2A4B3A] text-white px-4 py-2.5 rounded-full font-bold text-sm hover:bg-[#3A5C4A] transition-colors"
+                      className="flex items-center justify-center bg-[#2A4B3A] text-white w-10 h-10 rounded-full hover:bg-[#3A5C4A] transition-colors"
                       aria-label="Buzzsprout podcast hub"
                     >
-                      <Mic2 size={17} />
-                      Buzzsprout
+                      <Mic2 size={18} />
                     </a>
                     <a
                       href="https://www.youtube.com/@LulubugsPodcastForParents"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-[#2A4B3A] text-white px-4 py-2.5 rounded-full font-bold text-sm hover:bg-[#3A5C4A] transition-colors"
-                      aria-label="YouTube podcast hub"
+                      className="flex items-center justify-center bg-[#2A4B3A] text-white w-10 h-10 rounded-full hover:bg-[#3A5C4A] transition-colors"
+                      aria-label="YouTube podcast"
                     >
-                      <Youtube size={17} />
-                      YouTube
+                      <Youtube size={18} />
                     </a>
                     <a
                       href="https://www.instagram.com/lulubugspodcast"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-[#2A4B3A] text-white px-4 py-2.5 rounded-full font-bold text-sm hover:bg-[#3A5C4A] transition-colors"
+                      className="flex items-center justify-center bg-[#2A4B3A] text-white w-10 h-10 rounded-full hover:bg-[#3A5C4A] transition-colors"
                       aria-label="Instagram"
                     >
-                      <Instagram size={17} />
-                      Instagram
+                      <Instagram size={18} />
                     </a>
                     <a
                       href="https://www.tiktok.com/@lulubugspodcast?_r=1&_t=ZP-97WMYBreaDu"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 bg-[#2A4B3A] text-white px-4 py-2.5 rounded-full font-bold text-sm hover:bg-[#3A5C4A] transition-colors"
+                      className="flex items-center justify-center bg-[#2A4B3A] text-white w-10 h-10 rounded-full hover:bg-[#3A5C4A] transition-colors"
                       aria-label="TikTok"
                     >
-                      <FaTiktok size={15} />
-                      TikTok
+                      <FaTiktok size={16} />
                     </a>
                   </div>
                 </div>
