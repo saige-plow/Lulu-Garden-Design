@@ -2,6 +2,8 @@ import React from 'react';
 import bgRoseGarden from '../assets/reference/bg-rose-garden.png';
 import jilPhoto from '../assets/reference/jil.jpg';
 import teamPhoto from '../assets/reference/team.jpg';
+import drKarenPhoto from '../assets/reference/dr-karen.jpg';
+import brighamPhoto from '../assets/reference/brigham-taylor.jpg';
 
 export function About() {
   const team = [
@@ -17,14 +19,14 @@ export function About() {
       role: "Board-Certified Child Psychiatrist",
       bio: "Dr. Karen is a board-certified child psychiatrist who brings deep expertise in child development to everything we create. She reviews all our content to ensure it fosters emotional wellbeing and age-appropriate growth — giving families confidence that this is a space built with children in mind.",
       color: "secondary",
-      photo: null
+      photo: drKarenPhoto
     },
     {
       name: "Brigham Taylor",
       role: "Director",
       bio: "Brigham brings a director's eye for warmth and detail to every episode of Lulubug's Garden, shaping how each story looks, sounds, and feels on screen. He works closely with the cast and crew to keep every scene playful, grounded, and true to the spirit of the garden.",
       color: "accent",
-      photo: null
+      photo: brighamPhoto
     },
     {
       name: "Executive Producers",
