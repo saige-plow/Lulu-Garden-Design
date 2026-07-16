@@ -21,6 +21,21 @@ const MENTAL_HEALTH_MOMENTS = [
     title: "Helping Kids Feel Safe After Mistakes (Shame)",
     description: "A caring look at how to help children move through shame and feel safe again after a mistake.",
   },
+  {
+    videoId: 'yxO50ctmRZQ',
+    title: "When I Feel Angry",
+    description: "A Mental Health Moment on helping children understand angry feelings and find healthy ways to work through them.",
+  },
+  {
+    videoId: 'LiZHM0uJqxc',
+    title: "When Your Child Feels Disappointed",
+    description: "A gentle Mental Health Moment on guiding kids through disappointment and building emotional resilience.",
+  },
+  {
+    videoId: 'mSauTLQ28E4',
+    title: "When I Feel Optimistic",
+    description: "A bright Mental Health Moment on nurturing a hopeful outlook and helping children lean into positive feelings.",
+  },
 ];
 
 export function MentalHealthMatters() {
