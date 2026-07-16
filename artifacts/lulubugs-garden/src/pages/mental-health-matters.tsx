@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Phone, ExternalLink, Youtube } from 'lucide-react';
 import hmhfLogo from '../assets/reference/hmhf-logo.png';
-import hmhiLogo from '../assets/reference/hmhi-logo.png';
+import hmhiLogo from '../assets/reference/hmhi-horizontal.png';
 import {
   Carousel,
   CarouselContent,
