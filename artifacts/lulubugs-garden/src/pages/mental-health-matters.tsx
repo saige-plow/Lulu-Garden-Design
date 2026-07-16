@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Phone, ExternalLink, Youtube } from 'lucide-react';
 import hmhfLogo from '../assets/reference/hmhf-logo.png';
-import hmhiLogo from '../assets/reference/hmhi-horizontal.png';
+import hmhiLogo from '../assets/reference/hmhi-stacked.png';
 import {
   Carousel,
   CarouselContent,
@@ -36,40 +36,11 @@ export function MentalHealthMatters() {
         This page uses a specific, calmer sage/mint background 
         to distinguish it as a resource/trust page 
       */}
-      
-      {/* Safety Band - CRITICAL ELEMENT */}
-      <div className="bg-[#2A4B3A] text-white py-6 px-4 w-full shadow-md relative z-20">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex-1 text-center md:text-left">
-            <h3 className="font-bold text-xl mb-1 text-[#9AD6B3]">You're Never Alone.</h3>
-            <p className="text-white/90 text-sm md:text-base leading-relaxed">
-              We believe learning positive mental health skills is critical to preventing challenges as we grow. Sometimes, however, we may need some extra help. If you or a loved one is struggling or in crisis, contact the 988 Suicide & Crisis Lifeline. No-cost, confidential support is available nationwide, 24/7 by phone, text, or chat.
-            </p>
-          </div>
-          <div className="flex flex-col items-center gap-3 shrink-0">
-            <a 
-              href="tel:988" 
-              className="flex items-center gap-2 bg-[#9AD6B3] text-[#2A4B3A] px-6 py-3 rounded-full font-bold text-lg hover:bg-white transition-colors"
-            >
-              <Phone size={20} />
-              Call 988
-            </a>
-            <a 
-              href="https://988lifeline.org" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="text-white/80 text-sm hover:text-white underline underline-offset-4"
-            >
-              Visit 988lifeline.org
-            </a>
-          </div>
-        </div>
-      </div>
 
       <div className="pt-16 pb-24 px-4">
         <div className="max-w-4xl mx-auto">
 
-          {/* Why Mental Health? — moved above the carousel */}
+          {/* Why Mental Health? — first section on the page */}
           <div className="text-center mb-20">
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#2A4B3A] mb-8">
               Why Mental Health?
@@ -92,11 +63,11 @@ export function MentalHealthMatters() {
             <div className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-[#2A4B3A]/10">
               <div className="flex flex-col md:flex-row gap-10 items-start">
                 <div className="w-full md:w-1/3 shrink-0">
-                  <div className="w-full aspect-[3/2] bg-[#F4F9F6] border border-[#2A4B3A]/20 rounded-[1.5rem] flex items-center justify-center p-6">
+                  <div className="w-full aspect-[3/2] bg-[#F4F9F6] border border-[#2A4B3A]/20 rounded-[1.5rem] overflow-hidden">
                     <img
                       src={hmhfLogo}
                       alt="Huntsman Family Foundation logo"
-                      className="max-w-full max-h-full object-contain"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                 </div>
@@ -126,11 +97,11 @@ export function MentalHealthMatters() {
             <div className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-[#2A4B3A]/10">
               <div className="flex flex-col md:flex-row gap-10 items-start">
                 <div className="w-full md:w-1/3 shrink-0">
-                  <div className="w-full aspect-[3/2] bg-[#F4F9F6] border border-[#2A4B3A]/20 rounded-[1.5rem] flex items-center justify-center p-6">
+                  <div className="w-full aspect-square bg-[#F4F9F6] border border-[#2A4B3A]/20 rounded-[1.5rem] overflow-hidden">
                     <img
                       src={hmhiLogo}
                       alt="Huntsman Mental Health Institute logo"
-                      className="max-w-full max-h-full object-contain"
+                      className="w-full h-full object-contain"
                     />
                   </div>
                 </div>
@@ -225,7 +196,7 @@ export function MentalHealthMatters() {
           </div>
 
           {/* Podcast for parents resource */}
-          <div className="mt-16">
+          <div className="mb-24">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-[#2A4B3A] text-center mb-8">
               Lulubug's Podcast
             </h2>
@@ -263,6 +234,36 @@ export function MentalHealthMatters() {
               </div>
             </div>
           </div>
+
+          {/* 988 Crisis Card — bottom of page */}
+          <div className="bg-[#2A4B3A] text-white rounded-[2.5rem] p-8 md:p-12 shadow-sm">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="font-bold text-xl mb-2 text-[#9AD6B3]">You're Never Alone.</h3>
+                <p className="text-white/90 text-sm md:text-base leading-relaxed">
+                  We believe learning positive mental health skills is critical to preventing challenges as we grow. Sometimes, however, we may need some extra help. If you or a loved one is struggling or in crisis, contact the 988 Suicide & Crisis Lifeline. No-cost, confidential support is available nationwide, 24/7 by phone, text, or chat.
+                </p>
+              </div>
+              <div className="flex flex-col items-center gap-3 shrink-0">
+                <a 
+                  href="tel:988" 
+                  className="flex items-center gap-2 bg-[#9AD6B3] text-[#2A4B3A] px-6 py-3 rounded-full font-bold text-lg hover:bg-white transition-colors"
+                >
+                  <Phone size={20} />
+                  Call 988
+                </a>
+                <a 
+                  href="https://988lifeline.org" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-white/80 text-sm hover:text-white underline underline-offset-4"
+                >
+                  Visit 988lifeline.org
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
