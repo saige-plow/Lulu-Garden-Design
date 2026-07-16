@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
-import { Phone, ExternalLink, Youtube } from 'lucide-react';
+import { Phone, ExternalLink, Youtube, Mic2, Instagram } from 'lucide-react';
+import { FaTiktok } from 'react-icons/fa';
 import hmhfLogo from '../assets/reference/hmhf-logo.png';
-import hmhiLogo from '../assets/reference/hmhi-stacked.png';
+import hmhiLogo from '../assets/reference/hmhi-horizontal.png';
 import {
   Carousel,
   CarouselContent,
@@ -60,17 +61,9 @@ export function MentalHealthMatters() {
             <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#2A4B3A] mb-8">
               Why Mental Health?
             </h2>
-            <div className="text-xl text-[#3A5C4A] leading-relaxed space-y-6 text-left md:text-center">
-              <p>
-                Here at Lulubug's Garden, we believe that a lifetime of healthy minds is possible for all of us. Our adventures in the garden are all rooted in building skills that foster positive mental health from a very early age. 
-              </p>
-              <p>
-                Learning to recognize and address feelings, making decisions about how to deal with negative emotions, and learning how to support each other, are all part of why we created Lulubug's Garden. We believe that mental health is part of our overall health.
-              </p>
-              <p>
-                We also know that there are many people who do not know where to turn for mental health support and treatment. By partnering with two innovative groups, we believe we can share correct principles with a non-threatening, de-stigmatizing approach.
-              </p>
-            </div>
+            <p className="text-xl text-[#3A5C4A] leading-relaxed">
+              Here at Lulubug's Garden, we believe that a lifetime of healthy minds is possible for all of us. Our adventures in the garden are rooted in building skills that foster positive mental health from a very early age — learning to recognize and address feelings, make decisions about negative emotions, and support each other. We believe mental health is part of our overall health, and we know that many people don't know where to turn for support. By partnering with two innovative groups, we're able to share correct principles with a non-threatening, de-stigmatizing approach.
+            </p>
           </div>
 
           <div className="space-y-16 mb-24">
@@ -112,11 +105,11 @@ export function MentalHealthMatters() {
             <div className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-[#2A4B3A]/10">
               <div className="flex flex-col md:flex-row gap-10 items-start">
                 <div className="w-full md:w-1/3 shrink-0">
-                  <div className="w-full aspect-square bg-[#F4F9F6] border border-[#2A4B3A]/20 rounded-[1.5rem] overflow-hidden">
+                  <div className="w-full aspect-[3/2] bg-[#F4F9F6] border border-[#2A4B3A]/20 rounded-[1.5rem] flex items-center justify-center p-6">
                     <img
                       src={hmhiLogo}
                       alt="Huntsman Mental Health Institute logo"
-                      className="w-full h-full object-contain"
+                      className="max-w-full max-h-full object-contain"
                     />
                   </div>
                 </div>
@@ -236,15 +229,49 @@ export function MentalHealthMatters() {
                   <p className="text-[#3A5C4A] leading-relaxed mb-6">
                     Hosted by Jil & Karen, Lulubug's Podcast for Parents goes deeper on the topics your child explores in the garden — unpacking each episode's emotional themes with practical, real-world conversation starters, so you can keep the mental health moment going long after the screen turns off.
                   </p>
-                  <a
-                    href="https://www.youtube.com/@LulubugsPodcastForParents"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-[#2A4B3A] text-white px-6 py-3 rounded-full font-bold hover:bg-[#3A5C4A] transition-colors"
-                  >
-                    <Youtube size={20} />
-                    Listen on YouTube
-                  </a>
+                  <p className="text-sm font-bold text-[#3A5C4A] mb-3 uppercase tracking-wider">Listen &amp; Follow</p>
+                  <div className="flex flex-wrap gap-3">
+                    <a
+                      href="https://lulubugspodcastforparents.buzzsprout.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 bg-[#2A4B3A] text-white px-4 py-2.5 rounded-full font-bold text-sm hover:bg-[#3A5C4A] transition-colors"
+                      aria-label="Buzzsprout podcast hub"
+                    >
+                      <Mic2 size={17} />
+                      Buzzsprout
+                    </a>
+                    <a
+                      href="https://www.youtube.com/@LulubugsPodcastForParents"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 bg-[#2A4B3A] text-white px-4 py-2.5 rounded-full font-bold text-sm hover:bg-[#3A5C4A] transition-colors"
+                      aria-label="YouTube podcast hub"
+                    >
+                      <Youtube size={17} />
+                      YouTube
+                    </a>
+                    <a
+                      href="https://www.instagram.com/lulubugspodcast"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 bg-[#2A4B3A] text-white px-4 py-2.5 rounded-full font-bold text-sm hover:bg-[#3A5C4A] transition-colors"
+                      aria-label="Instagram"
+                    >
+                      <Instagram size={17} />
+                      Instagram
+                    </a>
+                    <a
+                      href="https://www.tiktok.com/@lulubugspodcast?_r=1&_t=ZP-97WMYBreaDu"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 bg-[#2A4B3A] text-white px-4 py-2.5 rounded-full font-bold text-sm hover:bg-[#3A5C4A] transition-colors"
+                      aria-label="TikTok"
+                    >
+                      <FaTiktok size={15} />
+                      TikTok
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

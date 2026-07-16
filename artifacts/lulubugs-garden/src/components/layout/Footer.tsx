@@ -52,11 +52,11 @@ export function Footer() {
           
           <div>
             <h4 className="font-bold text-lg mb-4 text-accent">Our Partners</h4>
-            <div className="flex flex-col gap-4">
-              <a href="https://huntsmanmentalhealthfoundation.org/" target="_blank" rel="noopener noreferrer" className="block hover:opacity-80 transition-opacity w-fit">
+            <div className="flex flex-col items-start gap-4">
+              <a href="https://huntsmanmentalhealthfoundation.org/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
                 <img src={hmhfLogo} alt="Huntsman Mental Health Foundation" className="h-10 w-auto object-contain brightness-0 invert" />
               </a>
-              <a href="https://healthcare.utah.edu/hmhi" target="_blank" rel="noopener noreferrer" className="block hover:opacity-80 transition-opacity w-fit">
+              <a href="https://healthcare.utah.edu/hmhi" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
                 <img src={hmhiLogo} alt="Huntsman Mental Health Institute" className="h-10 w-auto object-contain brightness-0 invert" />
               </a>
             </div>
