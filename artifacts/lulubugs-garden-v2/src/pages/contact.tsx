@@ -39,11 +39,11 @@ export function Contact() {
           <div className="space-y-8">
             <div>
               <h3 className="font-bold text-lg mb-2">General Inquiries</h3>
-              <a href="mailto:hello@lulubugsgarden.com" className="text-secondary hover:underline font-medium">hello@lulubugsgarden.com</a>
+              <a href="mailto:office@lulubug.com" className="text-secondary hover:underline font-medium">office@lulubug.com</a>
             </div>
             <div>
               <h3 className="font-bold text-lg mb-2">Partnerships</h3>
-              <a href="mailto:partners@lulubugsgarden.com" className="text-secondary hover:underline font-medium">partners@lulubugsgarden.com</a>
+              <a href="mailto:office@lulubug.com" className="text-secondary hover:underline font-medium">office@lulubug.com</a>
             </div>
             <div className="p-6 bg-white rounded-3xl border border-border mt-8">
               <p className="font-bold mb-2">Need immediate help?</p>
