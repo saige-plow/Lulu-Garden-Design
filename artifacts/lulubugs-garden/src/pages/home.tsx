@@ -84,7 +84,7 @@ export function Home() {
         </div>
       </section>
 
-      {/* Featured Episode / Concept */}
+      {/* Featured Episodes */}
       <section className="py-20 bg-primary text-primary-foreground relative px-4">
         <div className="absolute top-0 left-0 w-full overflow-hidden leading-0 transform -translate-y-full">
           <svg className="relative block w-full h-12 md:h-20" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -98,9 +98,9 @@ export function Home() {
         </div>
         
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-6">Learning to grow, together.</h2>
-            <p className="text-xl text-primary-foreground/80 text-left sm:text-center">
+          <div className="mb-12">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Learning to grow, together.</h2>
+            <p className="text-xl text-primary-foreground/80 max-w-2xl">
               Join Lulubug and her friends as they navigate big feelings, learn empathy, and discover how to be brave.
             </p>
           </div>
@@ -121,7 +121,7 @@ export function Home() {
             ))}
           </div>
           
-          <div className="mt-12 text-center">
+          <div className="mt-10">
             <a 
               href="https://www.youtube.com/@LulubugsGarden" 
               target="_blank" 
@@ -137,19 +137,19 @@ export function Home() {
 
       {/* Trust & Partnership */}
       <section className="py-24 px-4 bg-white relative">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto">
           <span className="text-muted-foreground font-bold uppercase tracking-widest text-sm mb-4 block">In Partnership With</span>
-          <div className="flex justify-center mb-8">
+          <div className="flex mb-8">
             <img
               src={hmhfLogo}
               alt="Huntsman Mental Health Foundation"
-              className="h-24 object-contain"
+              className="h-20 object-contain"
             />
           </div>
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
             Rooted in real mental health expertise.
           </h2>
-          <p className="text-lg text-foreground/70 mb-10 text-left">
+          <p className="text-lg text-foreground/70 mb-10 max-w-2xl">
             We partner with the Huntsman Mental Health Foundation and board-certified child psychiatrists to ensure every story fosters genuine emotional wellbeing for your child.
           </p>
           <Link 
@@ -166,11 +166,11 @@ export function Home() {
         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/30 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
         
-        <div className="max-w-3xl mx-auto text-center relative z-10 bg-white/60 backdrop-blur-md p-10 md:p-16 rounded-[3rem] border border-white/50 shadow-xl">
+        <div className="max-w-3xl mx-auto relative z-10 bg-white/60 backdrop-blur-md p-10 md:p-16 rounded-[3rem] border border-white/50 shadow-xl">
           <h2 className="font-display text-4xl md:text-5xl font-bold text-primary mb-6">
             Let's grow together
           </h2>
-          <p className="text-lg text-foreground/80 mb-10 text-left sm:text-center">
+          <p className="text-lg text-foreground/80 mb-10">
             Sign up for the Lulubug's Garden newsletter to get free activity sheets, parenting resources, and updates on new episodes.
           </p>
           <NewsletterForm />

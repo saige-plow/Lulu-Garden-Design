@@ -5,11 +5,11 @@ export function Press() {
   return (
     <div className="w-full pt-16 pb-24 px-4 bg-white">
       <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-20">
+        <div className="mb-16">
           <h1 className="font-display text-5xl md:text-6xl font-bold text-primary mb-6">
             Press & Media
           </h1>
-          <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/70 max-w-2xl">
             Resources, assets, and news about Lulubug's Garden and our mission to support early childhood mental health.
           </p>
         </div>
@@ -75,9 +75,9 @@ export function Press() {
               <p className="text-foreground/80 mb-6 text-sm">
                 For interview requests, screeners, or additional assets, please reach out to our press team.
               </p>
-              <a href="mailto:press@lulubugsgarden.com" className="inline-flex items-center gap-2 font-bold text-secondary hover:text-secondary/80">
+              <a href="mailto:office@lulubug.com" className="inline-flex items-center gap-2 font-bold text-secondary hover:text-secondary/80">
                 <Mail size={18} />
-                press@lulubugsgarden.com
+                office@lulubug.com
               </a>
             </div>
 

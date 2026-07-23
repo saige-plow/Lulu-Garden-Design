@@ -57,7 +57,7 @@ export function MentalHealthMatters() {
         <div className="max-w-4xl mx-auto">
 
           {/* Why Mental Health? — first section on the page */}
-          <div className="text-center mb-20">
+          <div className="mb-20">
             <h2 className="font-display text-4xl md:text-5xl font-bold text-evergreen-ivy mb-8">
               Why Mental Health?
             </h2>
@@ -139,11 +139,11 @@ export function MentalHealthMatters() {
 
           {/* Mental Health Moment video carousel */}
           <div className="mb-24">
-            <div className="text-center mb-10">
+            <div className="mb-10">
               <h1 className="font-display text-4xl md:text-5xl font-bold text-evergreen-ivy mb-4">
                 Mental Health Moments
               </h1>
-              <p className="text-lg text-evergreen-ivy max-w-2xl mx-auto">
+              <p className="text-lg text-evergreen-ivy max-w-2xl">
                 Every episode of Lulubug's Garden includes a short Mental Health Moment. Watch a few of our favorites below, or visit{' '}
                 <a
                   href="https://www.youtube.com/@lulubugsgarden"
@@ -190,7 +190,7 @@ export function MentalHealthMatters() {
               <CarouselNext className="border-evergreen-ivy/20 text-evergreen-ivy" />
             </Carousel>
 
-            <div className="text-center mt-8">
+            <div className="mt-8">
               <a
                 href="https://www.youtube.com/@lulubugsgarden"
                 target="_blank"
@@ -205,7 +205,7 @@ export function MentalHealthMatters() {
 
           {/* Podcast for parents resource */}
           <div className="mb-24">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-evergreen-ivy text-center mb-8">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-evergreen-ivy mb-8">
               Lulubug's Podcast
             </h2>
             <div className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-evergreen-ivy/10">

@@ -62,7 +62,7 @@ export function Friends() {
   return (
     <div className="w-full pt-12 pb-24 px-4">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="max-w-3xl mb-16">
           <h1 className="font-display text-5xl md:text-6xl font-bold text-primary mb-6">
             Meet the Garden Friends
           </h1>
@@ -72,13 +72,13 @@ export function Friends() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {friends.map((friend) => (
             <div 
               key={friend.name} 
               className="flex flex-col bg-white rounded-[2.5rem] p-8 shadow-sm border border-border hover:shadow-xl hover:-translate-y-2 transition-all duration-300 group"
             >
-              <div className="flex justify-center mb-8">
+              <div className="flex justify-center mb-6">
                 {friend.photo ? (
                   <img
                     src={friend.photo}
@@ -95,9 +95,9 @@ export function Friends() {
                   </div>
                 )}
               </div>
-              <div className="text-center flex-1 flex flex-col">
-                <h3 className="font-display text-3xl font-bold text-foreground mb-2">{friend.name}</h3>
-                <span className="inline-block text-sm font-bold uppercase tracking-wider text-muted-foreground mb-6">
+              <div className="flex-1 flex flex-col">
+                <h3 className="font-display text-3xl font-bold text-foreground mb-1">{friend.name}</h3>
+                <span className="inline-block text-sm font-bold uppercase tracking-wider text-muted-foreground mb-4">
                   {friend.role}
                 </span>
                 <p className="text-foreground/80 leading-relaxed">

@@ -13,8 +13,8 @@ export function Join() {
       </div>
 
       <div className="max-w-2xl w-full relative z-10">
-        <div className="bg-white p-10 md:p-16 rounded-[3rem] shadow-xl border border-border text-center">
-          <div className="w-20 h-20 bg-secondary/10 text-secondary rounded-full flex items-center justify-center mx-auto mb-8 blob-shape">
+        <div className="bg-white p-10 md:p-16 rounded-[3rem] shadow-xl border border-border">
+          <div className="w-20 h-20 bg-secondary/10 text-secondary rounded-full flex items-center justify-center mb-8 blob-shape">
             <Mail size={40} />
           </div>
           
@@ -22,7 +22,7 @@ export function Join() {
             Join the Garden Club
           </h1>
           
-          <p className="text-lg text-foreground/80 mb-10 max-w-md mx-auto">
+          <p className="text-lg text-foreground/80 mb-10 max-w-md">
             Grown-ups, leave your email to get gentle reminders for new episodes, free coloring pages, and resources for helping your little ones navigate big feelings.
           </p>
           

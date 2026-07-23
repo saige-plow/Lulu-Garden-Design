@@ -42,17 +42,17 @@ export function About() {
       {/* Mission Section */}
       <section className="pt-16 pb-24 px-4 bg-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-        <div className="max-w-4xl mx-auto text-center relative z-10">
+        <div className="max-w-4xl mx-auto relative z-10">
           <h1 className="font-display text-5xl md:text-6xl font-bold text-primary mb-8">
             Why we planted this garden
           </h1>
-          <p className="text-2xl md:text-3xl font-display text-foreground/90 leading-normal mb-8">
+          <p className="text-2xl md:text-3xl font-display text-foreground/90 leading-normal mb-6">
             We nurture self-awareness, empathy, resilience, and curiosity — through joyful storytelling and interactive play that helps children grow.
           </p>
-          <p className="text-xl text-secondary font-bold">
+          <p className="text-xl text-secondary font-bold mb-12">
             A world of confident, emotionally-healthy children starts in the garden, one feeling at a time.
           </p>
-          <div className="mt-12 flex justify-center">
+          <div className="flex justify-center">
             <img
               src={bgRoseGarden}
               alt="Lulubug's Garden — rose garden scene"
@@ -65,14 +65,14 @@ export function About() {
       {/* Team Section */}
       <section className="py-24 px-4 bg-background">
         <div className="max-w-7xl mx-auto">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-center mb-16 text-foreground">
+          <h2 className="font-display text-4xl md:text-5xl font-bold mb-16 text-foreground">
             Meet the team
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
             {team.map((member) => (
               <div key={member.name} className="flex flex-col sm:flex-row gap-8 items-start">
-                <div className="shrink-0 w-full sm:w-auto flex justify-center">
+                <div className="shrink-0 w-full sm:w-auto flex justify-center sm:justify-start">
                   {member.photo ? (
                     <img
                       src={member.photo}
