@@ -63,7 +63,7 @@ export function Friends() {
     <div className="w-full pt-12 pb-24 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="max-w-3xl mb-16">
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-primary mb-6">
+          <h1 className="font-display text-4xl md:text-6xl font-bold text-primary mb-6">
             Meet the Garden Friends
           </h1>
           <p className="text-xl text-foreground/80 font-medium leading-relaxed">

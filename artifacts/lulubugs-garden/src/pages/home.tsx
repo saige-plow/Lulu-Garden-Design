@@ -167,7 +167,7 @@ export function Home() {
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/10 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
         
         <div className="max-w-3xl mx-auto relative z-10 bg-white/60 backdrop-blur-md p-10 md:p-16 rounded-[3rem] border border-white/50 shadow-xl">
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-primary mb-6">
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-primary mb-6">
             Let's grow together
           </h2>
           <p className="text-lg text-foreground/80 mb-10">

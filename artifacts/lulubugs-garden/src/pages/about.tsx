@@ -43,10 +43,10 @@ export function About() {
       <section className="pt-16 pb-24 px-4 bg-white relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
         <div className="max-w-4xl mx-auto relative z-10">
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-primary mb-8">
+          <h1 className="font-display text-4xl md:text-6xl font-bold text-primary mb-8">
             Why we planted this garden
           </h1>
-          <p className="text-2xl md:text-3xl font-display text-foreground/90 leading-normal mb-6">
+          <p className="text-lg md:text-3xl font-display text-foreground/90 leading-normal mb-6">
             We nurture self-awareness, empathy, resilience, and curiosity — through joyful storytelling and interactive play that helps children grow.
           </p>
           <p className="text-xl text-secondary font-bold mb-12">
