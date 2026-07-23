@@ -36,7 +36,7 @@ export function Friends() {
     {
       name: "Daisy",
       role: "The Joyful Spirit",
-      description: "Daisy loves to jump into every moment with excitement and laughter, bringing joy and energy to the group.",
+      description: "Daisy loves to jump into every moment with excitement and laughter, bringing joy and energy to the group. She's the first one to suggest a dance party, a silly game, or an adventure through the garden. Sometimes those big feelings of excitement can be hard to manage, and Daisy learns that it's okay to feel overwhelmed — and that there are ways to calm down without losing any of the fun. Her enthusiasm is contagious, and she reminds everyone that happiness is always worth sharing.",
       color: "accent",
       shape: "circle" as const,
       photo: daisyIllustrated
@@ -44,7 +44,7 @@ export function Friends() {
     {
       name: "Willow",
       role: "The Calming Presence",
-      description: "Willow brings a quieter presence, helping friends pause, listen, and understand their feelings.",
+      description: "Willow brings a quieter presence, helping friends pause, listen, and understand their feelings. She has a gift for noticing when someone needs a moment to breathe or a gentle word of encouragement. Willow shows that being calm doesn't mean holding feelings in — it means finding a way to feel them safely and move through them with care. Her steady, empathetic nature makes her the kind of friend everyone turns to when things feel too big to handle alone.",
       color: "primary",
       shape: "blob-1" as const,
       photo: willowIllustrated
