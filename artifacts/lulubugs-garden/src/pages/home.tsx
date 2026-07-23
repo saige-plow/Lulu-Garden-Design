@@ -99,8 +99,8 @@ export function Home() {
         
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="font-display text-4xl md:text-5xl font-bold mb-6">Learning to grow, together.</h2>
-            <p className="text-xl text-primary-foreground/80">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold mb-6">Learning to grow, together.</h2>
+            <p className="text-xl text-primary-foreground/80 text-left sm:text-center">
               Join Lulubug and her friends as they navigate big feelings, learn empathy, and discover how to be brave.
             </p>
           </div>
@@ -116,7 +116,7 @@ export function Home() {
                   />
                 </div>
                 <h3 className="font-display text-xl font-bold mb-2 px-2">{card.label}</h3>
-                <p className="text-primary-foreground/70 px-2 pb-2 text-sm">{card.desc}</p>
+                <p className="text-primary-foreground px-2 pb-2 text-sm">{card.desc}</p>
               </div>
             ))}
           </div>
@@ -149,7 +149,7 @@ export function Home() {
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
             Rooted in real mental health expertise.
           </h2>
-          <p className="text-lg text-foreground/70 mb-10">
+          <p className="text-lg text-foreground/70 mb-10 text-left">
             We partner with the Huntsman Mental Health Foundation and board-certified child psychiatrists to ensure every story fosters genuine emotional wellbeing for your child.
           </p>
           <Link 
@@ -170,7 +170,7 @@ export function Home() {
           <h2 className="font-display text-4xl md:text-5xl font-bold text-primary mb-6">
             Let's grow together
           </h2>
-          <p className="text-lg text-foreground/80 mb-10">
+          <p className="text-lg text-foreground/80 mb-10 text-left sm:text-center">
             Sign up for the Lulubug's Garden newsletter to get free activity sheets, parenting resources, and updates on new episodes.
           </p>
           <NewsletterForm />
