@@ -1,8 +1,3 @@
 uploads = []
 generated = []
-
-[[outputs]]
-id = "ohqQ9m_tr2PFnNV7uOfbE"
-uri = "file://.local/outputs/Mental-Health-Matters.pptx"
-type = "slides"
-title = "Mental Health Matters (PPTX)"
+outputs = []
