@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, Mail } from 'lucide-react';
+import { Download, Mail, Newspaper, PencilLine } from 'lucide-react';
 
 export function Press() {
   return (
@@ -21,9 +21,12 @@ export function Press() {
             <section>
               <h2 className="font-display text-3xl font-bold mb-6 text-foreground">About the Show</h2>
               <div className="prose prose-lg text-foreground/80 bg-background p-8 rounded-3xl border border-border">
-                <p className="italic text-muted-foreground mb-4">
-                  [Press boilerplate — add once approved]
-                </p>
+                <div className="flex items-start gap-3 mb-6 bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3 not-prose">
+                  <PencilLine size={18} className="text-amber-500 mt-0.5 shrink-0" />
+                  <p className="text-amber-700 text-sm font-medium">
+                    Press boilerplate pending approval — add final copy here before publishing.
+                  </p>
+                </div>
                 <p>
                   Lulubug's Garden is an upcoming children's series dedicated to teaching preschoolers that all feelings are okay. Through the adventures of Lulubug and her garden friends, the show models healthy emotional processing, empathy, and resilience. Produced in partnership with the Huntsman Mental Health Foundation, the series blends joyful storytelling with evidence-based mental health principles designed specifically for early childhood development.
                 </p>
@@ -32,9 +35,9 @@ export function Press() {
 
             <section>
               <h2 className="font-display text-3xl font-bold mb-6 text-foreground">In the News</h2>
-              <div className="flex flex-col items-center justify-center py-14 rounded-3xl bg-background border border-border text-center gap-3">
-                <span className="text-4xl">🌸</span>
-                <p className="font-display text-xl font-bold text-foreground/70">Coverage coming soon</p>
+              <div className="py-10 px-8 rounded-3xl bg-background border border-border">
+                <Newspaper size={28} className="text-muted-foreground mb-4" />
+                <p className="font-display text-xl font-bold text-foreground/70 mb-2">Coverage coming soon</p>
                 <p className="text-foreground/50 text-sm max-w-xs">
                   As Lulubug's Garden prepares for launch, we'll update this section with features, reviews, and interviews.
                 </p>
