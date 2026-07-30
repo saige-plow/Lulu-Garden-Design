@@ -22,7 +22,7 @@ export function Footer() {
           <div className="col-span-1 md:col-span-2">
             <h3 className="font-display text-3xl font-bold mb-4">Lulubug's Garden</h3>
             <p className="text-primary-foreground/80 max-w-md mb-8 text-lg">
-              A world of confident, emotionally-healthy children starts in the garden, one feeling at a time.
+              A world of confident, emotionally healthy children starts in the garden, one feeling at a time.
             </p>
             <div className="flex space-x-4">
               <a href="https://www.youtube.com/@LulubugsGarden" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-secondary hover:text-white transition-colors" aria-label="YouTube">

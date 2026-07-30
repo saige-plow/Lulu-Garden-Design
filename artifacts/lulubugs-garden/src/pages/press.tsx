@@ -1,51 +1,186 @@
 import React, { useState } from 'react';
-import { Download, Mail, Newspaper, PencilLine, Clock, ExternalLink, PlayCircle } from 'lucide-react';
+import { Download, Mail, Clock, ExternalLink, PlayCircle } from 'lucide-react';
 
-type NewsItem = {
+type CoverageItem = {
   outlet: string;
-  headline: string;
-  date: string;
+  logo: string;
   url: string;
-  description: string;
 };
 
-const NEWS_ITEMS: NewsItem[] = [
-  {
-    outlet: 'PR Newswire',
-    headline: 'Big Feelings Bloom Into Lifelong Skills in Lulubug\'s Garden',
-    date: 'April 30, 2026',
-    url: 'https://www.prnewswire.com/news-releases/big-feelings-bloom-into-lifelong-skills-in-lulubugs-garden-302758244.html',
-    description: 'Official launch press release: Lulubug\'s Garden premieres on YouTube, redefining what children\'s programming can be through music, movement, and emotional development.',
-  },
+const COVERAGE: CoverageItem[] = [
   {
     outlet: 'Parade',
-    headline: 'This New Series for Kids Has a Surprising Disney Link',
-    date: 'April 30, 2026',
-    url: 'https://parade.com/news/lulubugs-garden-kids-series-disney-disney-producer-emotional-development',
-    description: 'The thoughtful new children\'s series rethinking screen time — with a Disney producer at the helm.',
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDroYL0BIS8MM05Wbfk8cRt2_ARR4J89hKgsFPtCNKsucCpffzbUbuGwLM',
+    url: 'https://parade.com/news/lulubugs-garden-kids-series-disney-producer-emotional-development',
   },
   {
-    outlet: 'Today\'s Parent',
-    headline: 'A Disney Producer Is Behind This New YouTube Show About Kids\' Big Feelings',
-    date: 'April 30, 2026',
-    url: 'https://www.todaysparent.com/toddler/lulubugs-garden/',
-    description: 'A look at how Lulubug\'s Garden puts emotional regulation in the spotlight for preschoolers.',
+    outlet: "Today's Parent",
+    logo: 'https://www.zecraft.com/wp-content/uploads/2016/04/todays-parent-logotype.png',
+    url: 'https://www.todaysparent.com/toddler/lulubugs-garden',
   },
   {
-    outlet: 'KUTV (CBS Utah)',
-    headline: 'Utah-based YouTube series uses puppets, music to teach children emotional skills',
-    date: 'May 14, 2026',
-    url: 'https://kutv.com/news/arc-salt-lake/utah-based-youtube-series-uses-puppets-music-to-teach-children-emotional-skills',
-    description: 'Local news feature covering how Lulubug\'s Garden blends puppetry and original music to help children name and process their emotions.',
+    outlet: 'Yahoo',
+    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfbIWKCm0LglSs2YCGCVAM9nnvzgLTuJQKZ7kbnJLXY_hb0PHnURJsQM',
+    url: 'https://www.yahoo.com/entertainment/tv/articles/discover-lulubugs-garden-uses-disney-133000009.html',
   },
   {
-    outlet: 'KSL TV',
-    headline: 'The new kid\'s show premiering in Utah focused on children\'s mental health',
-    date: 'April 2026',
-    url: 'https://ksltv.com/ksl-noon-show/kids-show-utah-mental-health/907393/',
-    description: 'KSL coverage of the show\'s Utah premiere and its mission to support early childhood mental health.',
+    outlet: 'AOL',
+    logo: 'https://1000logos.net/wp-content/uploads/2016/10/AOL-Logo.png',
+    url: 'https://www.aol.com/articles/discover-lulubugs-garden-uses-disney-133000009.html',
+  },
+  {
+    outlet: 'Charlotte Observer',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/The_Charlotte_Observer_masthead.svg/960px-The_Charlotte_Observer_masthead.svg.png',
+    url: 'https://www.charlotteobserver.com/entertainment/article315584932.html',
+  },
+  {
+    outlet: 'KUTV',
+    logo: 'https://static-newson.akamaized.net/icons/v3/sinclair/KUTV.png',
+    url: 'https://kutv.com/news/local/utah-based-youtube-series-uses-puppets-music-to-teach-children-emotional-skills',
+  },
+  {
+    outlet: 'ABC4 Utah',
+    logo: 'https://www.abc4.com/wp-content/uploads/sites/4/2022/10/android-abc4-News-512x512-2.png',
+    url: 'https://www.abc4.com/news/news4utahplus/thrive/lulubugs-garden-a-new-series-helping-kids',
+  },
+  {
+    outlet: 'KMYU',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/KMYU_logo.svg/1280px-KMYU_logo.svg.png',
+    url: 'https://kmyu.tv/news/arc-salt-lake/utah-based-youtube-series-uses-puppets-music-to-teach-children-emotional-skills',
+  },
+  {
+    outlet: 'Bragging Mommy',
+    logo: 'https://assets.replocdn.com/projects/20b289ab-cd36-4dd9-890d-5318d84d857b/e6f97edf-3d24-46e7-bdc3-73962e6f2d40',
+    url: 'https://www.thebraggingmommy.com/new-youtube-kids-series-from-disney-producer-focuses-on-kids-mental-health/',
+  },
+  {
+    outlet: 'Sacramento Bee',
+    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/The_Sacramento_Bee_logo.svg/1280px-The_Sacramento_Bee_logo.svg.png',
+    url: 'https://www.sacbee.com/entertainment/article315584932.html',
+  },
+  {
+    outlet: 'Fort Worth Star-Telegram',
+    logo: 'https://static.wikia.nocookie.net/logopedia/images/f/f8/Fort_Worth_Star-Telegram.svg/revision/latest?cb=20140906202651',
+    url: 'https://www.star-telegram.com/entertainment/article315584932.html',
+  },
+  {
+    outlet: 'Bellingham Herald',
+    logo: '',
+    url: 'https://www.bellinghamherald.com/entertainment/article315584932.html',
+  },
+  {
+    outlet: 'Fresno Bee',
+    logo: '',
+    url: 'https://www.fresnobee.com/entertainment/article315584932.html',
+  },
+  {
+    outlet: 'Idaho Statesman',
+    logo: '',
+    url: 'https://www.idahostatesman.com/entertainment/article315584932.html',
+  },
+  {
+    outlet: 'Lexington Herald Leader',
+    logo: '',
+    url: 'https://www.kentucky.com/entertainment/article315584932.html',
+  },
+  {
+    outlet: 'Macon Telegraph',
+    logo: 'https://iconape.com/wp-content/png_logo_vector/the-telegraph-macon-2020-01-15.png',
+    url: 'https://www.macon.com/entertainment/article315584932.html',
+  },
+  {
+    outlet: 'Modesto Bee',
+    logo: '',
+    url: 'https://www.modbee.com/entertainment/article315584932.html',
+  },
+  {
+    outlet: 'Myrtle Beach Sun News',
+    logo: '',
+    url: 'https://www.myrtlebeachonline.com/entertainment/article315584932.html',
+  },
+  {
+    outlet: 'Rock Hill Herald',
+    logo: '',
+    url: 'https://www.heraldonline.com/entertainment/article315584932.html',
+  },
+  {
+    outlet: 'San Luis Obispo Tribune',
+    logo: '',
+    url: 'https://www.sanluisobispo.com/entertainment/article315584932.html',
+  },
+  {
+    outlet: 'Tacoma News Tribune',
+    logo: '',
+    url: 'https://www.thenewstribune.com/entertainment/article315584932.html',
+  },
+  {
+    outlet: 'The Olympian',
+    logo: '',
+    url: 'https://www.theolympian.com/entertainment/article315584932.html',
+  },
+  {
+    outlet: 'The State',
+    logo: 'https://iconape.com/wp-content/files/sp/281568/png/281568.png',
+    url: 'https://www.thestate.com/entertainment/article315584932.html',
+  },
+  {
+    outlet: 'Tri-City Herald',
+    logo: '',
+    url: 'https://www.tri-cityherald.com/entertainment/article315584932.html',
+  },
+  {
+    outlet: 'Wichita Eagle',
+    logo: '',
+    url: 'https://www.kansas.com/entertainment/article315584932.html',
+  },
+  {
+    outlet: 'Bradenton Herald',
+    logo: '',
+    url: 'https://www.bradenton.com/entertainment/article315584932.html',
+  },
+  {
+    outlet: 'Belleville News-Democrat',
+    logo: '',
+    url: 'https://www.bnd.com/entertainment/article315584932.html',
+  },
+  {
+    outlet: 'Hilton Head Island Packet',
+    logo: '',
+    url: 'https://www.islandpacket.com/entertainment/article315584932.html',
+  },
+  {
+    outlet: 'Merced Sun-Star',
+    logo: '',
+    url: 'https://www.mercedsunstar.com/entertainment/article315584932.html',
   },
 ];
+
+function LogoTile({ item }: { item: CoverageItem }) {
+  const [imgFailed, setImgFailed] = useState(false);
+
+  return (
+    <a
+      href={item.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      title={item.outlet}
+      className="flex items-center justify-center h-16 px-4 rounded-2xl bg-background border border-border hover:border-primary/30 hover:shadow-md transition-all group"
+    >
+      {item.logo && !imgFailed ? (
+        <img
+          src={item.logo}
+          alt={item.outlet}
+          onError={() => setImgFailed(true)}
+          className="max-h-8 max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300 opacity-70 group-hover:opacity-100"
+        />
+      ) : (
+        <span className="text-xs font-bold text-center text-foreground/60 group-hover:text-primary transition-colors leading-tight">
+          {item.outlet}
+        </span>
+      )}
+    </a>
+  );
+}
 
 export function Press() {
   const [toast, setToast] = useState<string | null>(null);
@@ -67,7 +202,7 @@ export function Press() {
 
       <div className="max-w-5xl mx-auto">
         <div className="mb-16">
-          <h1 className="font-display text-5xl md:text-6xl font-bold text-primary mb-6">
+          <h1 className="font-display text-4xl md:text-6xl font-bold text-primary mb-6">
             Press & Media
           </h1>
           <p className="text-xl text-foreground/70 max-w-2xl">
@@ -78,45 +213,33 @@ export function Press() {
         <div className="grid md:grid-cols-3 gap-12">
           {/* Main content column */}
           <div className="md:col-span-2 space-y-16">
-            
+
             <section>
               <h2 className="font-display text-3xl font-bold mb-6 text-foreground">About the Show</h2>
-              <div className="prose prose-lg text-foreground/80 bg-background p-8 rounded-3xl border border-border">
-                <div className="flex items-start gap-3 mb-6 bg-amber-50 border border-amber-200 rounded-2xl px-4 py-3 not-prose">
-                  <PencilLine size={18} className="text-amber-500 mt-0.5 shrink-0" />
-                  <p className="text-amber-700 text-sm font-medium">
-                    Press boilerplate pending approval — add final copy here before publishing.
-                  </p>
-                </div>
+              <div className="prose prose-lg text-foreground/80 bg-background p-8 rounded-3xl border border-border space-y-4">
                 <p>
-                  Lulubug's Garden is an upcoming children's series dedicated to teaching preschoolers that all feelings are okay. Through the adventures of Lulubug and her garden friends, the show models healthy emotional processing, empathy, and resilience. Produced in partnership with the Huntsman Mental Health Foundation, the series blends joyful storytelling with evidence-based mental health principles designed specifically for early childhood development.
+                  Lulubug's Garden is a children's series for ages 3–7 that helps young viewers build emotional awareness, social skills and resilience through music, movement, storytelling and imaginative play.
+                </p>
+                <p>
+                  Set in a vibrant garden world, the series follows twin sisters Willow and Daisy alongside Lulubug the Ladybug, Curby Caterpillar, Sterling Snail and the animated Feelings Flower as they navigate big emotions, friendships, healthy habits and everyday childhood challenges. Each episode is thoughtfully designed to entertain while giving children age-appropriate language and tools to better understand themselves and the people around them.
+                </p>
+                <p>
+                  Created by Jil Hunter, the series was inspired by her own experiences using creative play, art, music and nature to help her children connect and work through difficult feelings. Longtime Disney producer Brigham Taylor serves as director, while board-certified child and adolescent psychiatrist Dr. Karen Manotas provides guidance to ensure the show reflects developmentally informed, research-based practices.
+                </p>
+                <p>
+                  Each episode concludes with a brief segment from Dr. Karen that helps parents understand the lesson and offers practical ways to continue the conversation at home.
+                </p>
+                <p>
+                  Lulubug's Garden is now streaming on YouTube.
                 </p>
               </div>
             </section>
 
             <section>
               <h2 className="font-display text-3xl font-bold mb-6 text-foreground">In the News</h2>
-              <div className="space-y-4">
-                {NEWS_ITEMS.map((item) => (
-                  <a
-                    key={item.url}
-                    href={item.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-start gap-4 p-5 rounded-2xl bg-background border border-border hover:border-primary/30 hover:shadow-md transition-all group"
-                  >
-                    <Newspaper size={20} className="text-muted-foreground mt-1 shrink-0 group-hover:text-primary transition-colors" />
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2 mb-1">
-                        <span className="text-xs font-bold text-primary uppercase tracking-wide">{item.outlet}</span>
-                        <span className="text-xs text-foreground/40">·</span>
-                        <span className="text-xs text-foreground/50">{item.date}</span>
-                      </div>
-                      <p className="font-bold text-foreground group-hover:text-primary transition-colors leading-snug mb-1">{item.headline}</p>
-                      <p className="text-sm text-foreground/60 leading-snug">{item.description}</p>
-                    </div>
-                    <ExternalLink size={16} className="text-foreground/30 group-hover:text-primary shrink-0 mt-1 transition-colors" />
-                  </a>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {COVERAGE.map((item) => (
+                  <LogoTile key={item.url} item={item} />
                 ))}
               </div>
             </section>
@@ -155,7 +278,7 @@ export function Press() {
 
           {/* Sidebar */}
           <div className="space-y-8">
-            
+
             <div className="bg-primary/5 rounded-3xl p-8 border border-primary/10">
               <h3 className="font-display text-2xl font-bold mb-6 text-primary">Media Assets</h3>
               <ul className="space-y-4">
