@@ -1,5 +1,5 @@
 import React from 'react';
-import aboutHero from '../assets/reference/garden-friends-hero.jpg';
+import aboutHero from '../assets/reference/about-hero-team.jpg';
 import jilPhoto from '../assets/reference/jil.jpg';
 import teamPhoto from '../assets/reference/team.jpg';
 import drKarenPhoto from '../assets/reference/dr-karen.jpg';
@@ -43,8 +43,8 @@ export function About() {
       <section className="relative h-[480px] md:h-[580px] overflow-hidden">
         <img
           src={aboutHero}
-          alt="A child creating a Lulubug craft"
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          alt="The Lulubug's Garden cast and crew posing together on the garden set"
+          className="absolute inset-0 w-full h-full object-cover object-[center_30%]"
         />
         {/* Gradient: lighter at top so the craft activity shows, heavier at bottom for text */}
         <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/35 to-transparent" />
