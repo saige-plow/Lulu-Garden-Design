@@ -1,17 +1,20 @@
 import React from 'react';
 import { Link, useLocation } from 'wouter';
-import { Menu, X, Youtube, Mail, ArrowRight, Heart } from 'lucide-react';
+import { Menu, X, Youtube, ShoppingBag } from 'lucide-react';
 import logo from '../../assets/reference/logo.png';
+import { useCart } from '../../lib/shop/cartContext';
 
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
   const [location] = useLocation();
+  const { itemCount, openDrawer } = useCart();
 
   const links = [
     { href: '/', label: 'Home' },
     { href: '/friends', label: 'Meet Garden Friends' },
     { href: '/about', label: 'About Us' },
     { href: '/mental-health-matters', label: 'Why Mental Health?' },
+    { href: '/shop', label: 'Shop' },
     { href: '/press', label: 'Press' },
     { href: '/contact', label: 'Contact' },
   ];
@@ -51,6 +54,21 @@ export function Navbar() {
               >
                 <Youtube size={20} />
               </a>
+
+              {/* Cart icon */}
+              <button
+                onClick={openDrawer}
+                aria-label={`Open cart${itemCount > 0 ? ` (${itemCount} items)` : ''}`}
+                className="relative flex items-center justify-center w-10 h-10 rounded-full bg-muted text-primary hover:bg-secondary hover:text-white transition-all transform hover:scale-105"
+              >
+                <ShoppingBag size={20} />
+                {itemCount > 0 && (
+                  <span className="absolute -top-1 -right-1 bg-secondary text-white text-[10px] font-bold rounded-full min-w-[18px] h-[18px] flex items-center justify-center px-0.5 shadow-sm">
+                    {itemCount > 99 ? '99+' : itemCount}
+                  </span>
+                )}
+              </button>
+
               <Link 
                 href="/join" 
                 className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground hover:bg-primary/90 transition-all transform hover:scale-105 shadow-sm"
@@ -60,7 +78,21 @@ export function Navbar() {
             </div>
           </div>
           
-          <div className="flex items-center lg:hidden gap-3">
+          <div className="flex items-center lg:hidden gap-2">
+            {/* Mobile cart icon */}
+            <button
+              onClick={openDrawer}
+              aria-label={`Open cart${itemCount > 0 ? ` (${itemCount} items)` : ''}`}
+              className="relative p-2 text-primary"
+            >
+              <ShoppingBag size={22} />
+              {itemCount > 0 && (
+                <span className="absolute top-0.5 right-0.5 bg-secondary text-white text-[9px] font-bold rounded-full min-w-[16px] h-[16px] flex items-center justify-center px-0.5">
+                  {itemCount}
+                </span>
+              )}
+            </button>
+
             <Link 
               href="/join" 
               className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground"

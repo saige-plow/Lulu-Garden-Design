@@ -1,8 +1,9 @@
+import React from 'react';
+import { Router as WouterRouter, Route, Switch } from 'wouter';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { Route, Switch, Router as WouterRouter } from 'wouter';
 import { Layout } from './components/layout/Layout';
-
-// Pages
+import { CartProvider } from './lib/shop/cartContext';
+import { CartDrawer } from './components/shop/CartDrawer';
 import { Home } from './pages/home';
 import { Friends } from './pages/friends';
 import { About } from './pages/about';
@@ -10,6 +11,9 @@ import { MentalHealthMatters } from './pages/mental-health-matters';
 import { Join } from './pages/join';
 import { Press } from './pages/press';
 import { Contact } from './pages/contact';
+import { Shop } from './pages/shop';
+import { Cart } from './pages/cart';
+import { Checkout } from './pages/checkout';
 
 const queryClient = new QueryClient();
 
@@ -35,6 +39,9 @@ function Router() {
       <Route path="/join" component={Join} />
       <Route path="/press" component={Press} />
       <Route path="/contact" component={Contact} />
+      <Route path="/shop" component={Shop} />
+      <Route path="/cart" component={Cart} />
+      <Route path="/checkout" component={Checkout} />
       <Route component={NotFound} />
     </Switch>
   );
@@ -44,9 +51,12 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, '')}>
-        <Layout>
-          <Router />
-        </Layout>
+        <CartProvider>
+          <Layout>
+            <Router />
+          </Layout>
+          <CartDrawer />
+        </CartProvider>
       </WouterRouter>
     </QueryClientProvider>
   );
