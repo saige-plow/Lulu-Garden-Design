@@ -1,5 +1,5 @@
 import React from 'react';
-import aboutHero from '../assets/reference/about-hero.jpg';
+import aboutHero from '../assets/reference/garden-friends-hero.jpg';
 import jilPhoto from '../assets/reference/jil.jpg';
 import teamPhoto from '../assets/reference/team.jpg';
 import drKarenPhoto from '../assets/reference/dr-karen.jpg';
