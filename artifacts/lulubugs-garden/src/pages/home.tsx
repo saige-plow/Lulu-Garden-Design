@@ -133,9 +133,9 @@ export function Home() {
 
       {/* Trust & Partnership */}
       <section className="py-24 px-4 bg-white relative">
-        <div className="max-w-4xl mx-auto">
-          <span className="text-muted-foreground font-bold uppercase tracking-widest text-sm mb-4 block">In Partnership With</span>
-          <div className="flex mb-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <span className="text-muted-foreground font-bold uppercase tracking-widest text-sm mb-6 block">In Partnership With</span>
+          <div className="flex justify-center mb-8">
             <img
               src={hmhfLogo}
               alt="Huntsman Mental Health Foundation"
@@ -145,7 +145,7 @@ export function Home() {
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-6">
             Rooted in real mental health expertise.
           </h2>
-          <p className="text-lg text-foreground/70 mb-10 max-w-2xl">
+          <p className="text-lg text-foreground/70 mb-10 max-w-2xl mx-auto">
             We partner with the Huntsman Mental Health Foundation and board-certified child psychiatrists to ensure every story fosters genuine emotional wellbeing for your child.
           </p>
           <Link
