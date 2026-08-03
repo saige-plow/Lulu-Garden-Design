@@ -1,5 +1,5 @@
 import React from 'react';
-import bgRoseGarden from '../assets/reference/bg-rose-garden.png';
+import aboutHero from '../assets/reference/about-hero.jpg';
 import jilPhoto from '../assets/reference/jil.jpg';
 import teamPhoto from '../assets/reference/team.jpg';
 import drKarenPhoto from '../assets/reference/dr-karen.jpg';
@@ -39,26 +39,31 @@ export function About() {
 
   return (
     <div className="w-full">
-      {/* Mission Section */}
-      <section className="pt-16 pb-24 px-4 bg-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-        <div className="max-w-4xl mx-auto relative z-10">
-          <h1 className="font-display text-4xl md:text-6xl font-bold text-primary mb-8">
+      {/* Hero Banner */}
+      <section className="relative h-[480px] md:h-[580px] overflow-hidden">
+        <img
+          src={aboutHero}
+          alt="A child creating a Lulubug craft"
+          className="absolute inset-0 w-full h-full object-cover object-top"
+        />
+        {/* Gradient: lighter at top so the craft activity shows, heavier at bottom for text */}
+        <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/35 to-transparent" />
+        <div className="relative z-10 h-full flex flex-col items-center justify-end pb-14 px-6 text-center">
+          <h1 className="font-display text-4xl md:text-6xl font-bold text-white drop-shadow-lg">
             Why we planted this garden
           </h1>
-          <p className="text-lg md:text-3xl font-display text-foreground/90 leading-normal mb-6">
+        </div>
+      </section>
+
+      {/* Mission Content */}
+      <section className="py-16 px-4 bg-white">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-xl md:text-2xl font-display text-foreground/85 leading-relaxed mb-6">
             We nurture self-awareness, empathy, resilience, and curiosity — through joyful storytelling and interactive play that helps children grow.
           </p>
-          <p className="text-xl text-secondary font-bold mb-12">
-            A world of confident, emotionally-healthy children starts in the garden, one feeling at a time.
+          <p className="text-lg text-secondary font-bold">
+            A world of confident, emotionally healthy children starts in the garden, one feeling at a time.
           </p>
-          <div className="flex justify-center">
-            <img
-              src={bgRoseGarden}
-              alt="Lulubug's Garden — rose garden scene"
-              className="blob-shape w-full max-w-2xl aspect-video object-cover shadow-xl"
-            />
-          </div>
         </div>
       </section>
 

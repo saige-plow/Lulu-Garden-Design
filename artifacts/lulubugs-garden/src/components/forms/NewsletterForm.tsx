@@ -54,7 +54,7 @@ export function NewsletterForm({ compact = false }: NewsletterFormProps) {
     <form onSubmit={handleSubmit} className={`flex ${compact ? 'flex-col sm:flex-row gap-2' : 'flex-col gap-4'} w-full max-w-md mx-auto`}>
       <div className="relative flex-1">
         <label htmlFor="newsletter-email" className="sr-only">
-          Grown-up's email address
+          Email address
         </label>
         <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-muted-foreground" size={20} />
         <input
@@ -63,7 +63,7 @@ export function NewsletterForm({ compact = false }: NewsletterFormProps) {
           required
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          placeholder="Grown-up's email address"
+          placeholder="Email address"
           disabled={loading}
           className="w-full pl-12 pr-4 py-3 rounded-full border-2 border-transparent bg-white shadow-sm focus:border-secondary focus:ring-4 focus:ring-secondary/20 outline-none transition-all font-sans text-foreground disabled:opacity-60"
         />
