@@ -9,6 +9,7 @@ import bgOrchids from '../assets/reference/bg-orchids.png';
 import bgLeftCarrots from '../assets/reference/bg-left-carrots.png';
 import bgRoseGardenFg from '../assets/reference/bg-rose-garden-fg.png';
 import hmhfLogo from '../assets/reference/hmhf-logo.png';
+import themeSongVideo from '../assets/video/lulubug-theme-song.mp4';
 
 const episodeCards = [
   {
@@ -72,9 +73,13 @@ export function Home() {
           
           <div className="relative z-10 order-1 md:order-2 flex justify-center">
             <div className="relative w-full max-w-md aspect-[4/3] transform rotate-2 hover:rotate-0 transition-transform duration-500">
-              <img
-                src={bgMeadowSun}
-                alt="Lulubug's Garden — a sunny meadow in the garden"
+              <video
+                src={themeSongVideo}
+                poster={bgMeadowSun}
+                controls
+                playsInline
+                preload="metadata"
+                aria-label="Lulubug's Garden theme song video"
                 className="blob-shape w-full h-full object-cover shadow-xl bg-white"
               />
               <div className="absolute -bottom-6 -left-6 w-24 h-24 rounded-full bg-accent/30 -z-10 blur-xl"></div>
