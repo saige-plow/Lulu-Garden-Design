@@ -94,12 +94,6 @@ export function Home() {
           <img src={logo} alt="Lulubug's Garden"
             className="w-40 md:w-56 lg:w-64 mb-6 drop-shadow-md" />
 
-          {/* Badge */}
-          <span className="inline-block px-4 py-1 rounded-full text-xs md:text-sm font-bold uppercase tracking-widest mb-8 border"
-            style={{ background: '#FFC42120', borderColor: '#FFC421', color: '#386641' }}>
-            Now Streaming on YouTube
-          </span>
-
           {/* Editorial headline — stacked */}
           <h1 className="font-display leading-none tracking-tight mb-8 select-none">
             <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
