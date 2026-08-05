@@ -2,17 +2,9 @@ import React from 'react';
 import { Link } from 'wouter';
 import { Youtube, ArrowRight, PlayCircle } from 'lucide-react';
 import { NewsletterForm } from '../components/forms/NewsletterForm';
-
-import logo            from '../assets/reference/logo.png';
-import bgRoseGardenFg  from '../assets/reference/bg-rose-garden-fg.png';
-import hmhfLogo        from '../assets/reference/hmhf-logo.png';
-
-import luluIllustrated     from '../assets/reference/lulu-illustrated.png';
-import curbyIllustrated    from '../assets/reference/curby-illustrated.png';
-import sterlingIllustrated from '../assets/reference/sterling-illustrated.png';
-import daisyIllustrated    from '../assets/reference/daisy-illustrated.png';
-import willowIllustrated   from '../assets/reference/willow-illustrated.png';
-import feelingsFlower      from '../assets/reference/feelings-flower.png';
+import bgMeadowSun    from '../assets/reference/bg-meadow-sun.png';
+import bgRoseGardenFg from '../assets/reference/bg-rose-garden-fg.png';
+import hmhfLogo       from '../assets/reference/hmhf-logo.png';
 
 const episodeCards = [
   {
@@ -37,104 +29,41 @@ export function Home() {
     <div className="w-full">
 
       {/* ── Hero ─────────────────────────────────────────────────── */}
-      <section className="relative min-h-screen overflow-hidden flex flex-col items-center justify-center"
-        style={{ background: '#FFF5F2' }}>
+      <section className="relative h-[560px] md:h-[680px] overflow-hidden">
+        <img
+          src={bgMeadowSun}
+          alt="Lulubug's Garden — a sunny meadow in the garden"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/50 to-primary/80" />
 
-        {/* Soft colour blobs */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {/* Top-left — Garden Vine */}
-          <div className="absolute -top-32 -left-32 w-[480px] h-[480px] rounded-full opacity-20"
-            style={{ background: '#7DB238', filter: 'blur(90px)' }} />
-          {/* Top-right — Dragonfly Wing */}
-          <div className="absolute -top-20 -right-24 w-[400px] h-[400px] rounded-full opacity-20"
-            style={{ background: '#91CFE8', filter: 'blur(80px)' }} />
-          {/* Bottom-left — Golden Nectar */}
-          <div className="absolute -bottom-24 -left-20 w-[440px] h-[440px] rounded-full opacity-20"
-            style={{ background: '#FFC421', filter: 'blur(100px)' }} />
-          {/* Bottom-right — Apricot Petal */}
-          <div className="absolute -bottom-16 -right-16 w-[360px] h-[360px] rounded-full opacity-25"
-            style={{ background: '#FFBFB2', filter: 'blur(80px)' }} />
-        </div>
-
-        {/* ── Floating characters ─────────────────────────────────── */}
-
-        {/* Feelings Flower — top-left */}
-        <img src={feelingsFlower} alt=""
-          className="absolute top-10 left-6 md:left-12 w-20 md:w-28 select-none pointer-events-none"
-          style={{ transform: 'rotate(-12deg)', mixBlendMode: 'multiply' }} />
-
-        {/* Sterling — top-right */}
-        <img src={sterlingIllustrated} alt=""
-          className="absolute top-8 right-6 md:right-14 w-24 md:w-36 drop-shadow-lg select-none pointer-events-none"
-          style={{ transform: 'rotate(8deg)' }} />
-
-        {/* Daisy — left, mid */}
-        <img src={daisyIllustrated} alt=""
-          className="absolute top-1/2 left-0 md:left-4 w-20 md:w-28 drop-shadow-lg select-none pointer-events-none -translate-y-20"
-          style={{ transform: 'translateY(-5rem) rotate(5deg)' }} />
-
-        {/* Willow — right, mid */}
-        <img src={willowIllustrated} alt=""
-          className="absolute top-1/2 right-0 md:right-4 w-20 md:w-28 drop-shadow-lg select-none pointer-events-none"
-          style={{ transform: 'translateY(-3rem) rotate(-6deg)' }} />
-
-        {/* Curby — bottom-right */}
-        <img src={curbyIllustrated} alt=""
-          className="absolute bottom-6 right-6 md:right-16 w-32 md:w-44 drop-shadow-xl select-none pointer-events-none"
-          style={{ transform: 'rotate(6deg)' }} />
-
-        {/* Lulubug — bottom-left, biggest */}
-        <img src={luluIllustrated} alt=""
-          className="absolute bottom-0 left-4 md:left-12 w-40 md:w-60 drop-shadow-xl select-none pointer-events-none" />
-
-        {/* ── Main content ────────────────────────────────────────── */}
-        <div className="relative z-10 flex flex-col items-center text-center px-6 py-16">
-
-          {/* Large logo — the first thing you see */}
-          <img src={logo} alt="Lulubug's Garden"
-            className="w-40 md:w-56 lg:w-64 mb-6 drop-shadow-md" />
-
-          {/* Editorial headline — stacked */}
-          <h1 className="font-display leading-none tracking-tight mb-8 select-none">
-            <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
-              style={{ color: '#386641' }}>
-              How are you
-            </span>
-            <span className="block text-6xl sm:text-8xl md:text-9xl lg:text-[10rem]"
-              style={{ color: '#386641', lineHeight: '0.92' }}>
-              feeling
-            </span>
-            <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-1"
-              style={{ color: '#ED1C24' }}>
-              today?
-            </span>
+        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+          <span className="inline-block py-1 px-4 rounded-full bg-white/20 text-white font-bold text-sm mb-6 tracking-wide uppercase backdrop-blur-sm">
+            Now Streaming on YouTube
+          </span>
+          <h1 className="font-display text-5xl md:text-7xl font-bold text-white leading-[1.1] mb-6 drop-shadow-lg">
+            Welcome to<br />
+            <span className="text-accent">Lulubug's</span> Garden
           </h1>
-
-          {/* Subtext */}
-          <p className="font-body text-base md:text-lg max-w-sm mb-10 leading-relaxed"
-            style={{ color: '#386641CC' }}>
-            A cozy show where kids learn that all feelings are welcome — and growing up is an adventure we share.
+          <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-xl font-medium leading-relaxed">
+            A cozy place where kids learn that all feelings are okay, and growing up is an adventure we share.
           </p>
-
-          {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="https://www.youtube.com/@LulubugsGarden"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 font-bold text-base md:text-lg text-white transition-transform hover:scale-105 shadow-lg"
-              style={{ background: '#ED1C24' }}
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-secondary px-8 py-4 text-white font-bold text-lg hover:bg-secondary/90 transition-transform transform hover:scale-105 shadow-lg"
             >
-              <Youtube size={22} />
+              <Youtube size={24} />
               Watch on YouTube
             </a>
             <Link
               href="/friends"
-              className="inline-flex items-center justify-center gap-2 rounded-full px-8 py-4 font-bold text-base md:text-lg transition-colors border-2"
-              style={{ color: '#386641', borderColor: '#386641' }}
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-white/20 backdrop-blur-sm px-8 py-4 text-white font-bold text-lg hover:bg-white/30 transition-colors border border-white/30"
             >
               Meet the Friends
-              <ArrowRight size={18} />
+              <ArrowRight size={20} />
             </Link>
           </div>
         </div>
