@@ -31,25 +31,23 @@
   --color-destructive: hsl(var(--destructive));
   --color-destructive-foreground: hsl(var(--destructive-foreground));
 
-  /* Brand palette — primary */
-  --color-lulubug-red: #ED1C24;
-  --color-golden-nectar: #FFC421;
-  --color-garden-vine: #7DB238;
-  --color-morning-dew: #FFFFF1;
+  /* ── Brand palette ────────────────────────────────────────────── */
+  --color-lulubug-red:      #ED1C24;   /* Lulubug Red        */
+  --color-garden-vine:      #7DB238;   /* Garden Vine        */
+  --color-golden-nectar:    #FFC421;   /* Golden Nectar      */
+  --color-morning-dew:      #FFF5F2;   /* Morning Dew (cream)*/
+  --color-evergreen-ivy:    #386641;   /* Evergreen Ivy      */
+  --color-spring-seedling:  #C9D480;   /* Spring Seedling    */
+  --color-apricot-petal:    #FFBFB2;   /* Apricot Petal      */
+  --color-lulubug-blush:    #FAA6AB;   /* Lulubug Blush      */
+  --color-dragonfly-wing:   #91CFE8;   /* Dragonfly Wing     */
+  --color-honeysuckle-glow: #F4D06F;   /* Honeysuckle Glow   */
 
-  /* Brand palette — secondary/accent */
-  --color-evergreen-ivy: #386641;
-  --color-spring-seedling: #C9D480;
-  --color-apricot-petal: #FFBFB2;
-  --color-lulubug-blush: #FAA6AB;
-  --color-dragonfly-wing: #91CFE8;
-  --color-honeysuckle-glow: #F4D06F;
-
-  --font-sans: var(--app-font-sans);
-  --font-serif: var(--app-font-serif);
+  --font-sans:    var(--app-font-sans);
+  --font-serif:   var(--app-font-serif);
   --font-display: var(--app-font-display);
-  --font-body: var(--app-font-body);
-  
+  --font-body:    var(--app-font-body);
+
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -57,62 +55,71 @@
 }
 
 :root {
-  --background: 40 33% 96%; /* Soft cream storybook background #F5F3ED */
-  --foreground: 140 25% 15%; /* Deep forest/moss green #1D3025 */
-  
-  --card: 0 0% 100%;
-  --card-foreground: 140 25% 15%;
-  --card-border: 40 20% 90%;
-  
+  /* ── Core semantic tokens — mapped to brand hex values ───────── */
+
+  /* Morning Dew #FFF5F2 — warm cream, not stark white */
+  --background: 14 100% 97%;
+  /* Evergreen Ivy dark — deep readable forest green */
+  --foreground: 131 25% 14%;
+
+  --card: 14 60% 99%;
+  --card-foreground: 131 25% 14%;
+  --card-border: 14 30% 90%;
+
   --popover: 0 0% 100%;
-  --popover-foreground: 140 25% 15%;
-  --popover-border: 40 20% 90%;
-  
-  --primary: 140 25% 35%; /* Earthy forest green */
-  --primary-foreground: 40 33% 96%;
-  
-  --secondary: 10 75% 60%; /* Soft warm ladybug red/coral */
+  --popover-foreground: 131 25% 14%;
+  --popover-border: 14 30% 90%;
+
+  /* Primary — Evergreen Ivy #386641 */
+  --primary: 131 29% 31%;
+  --primary-foreground: 14 100% 97%;
+
+  /* Secondary — Lulubug Red #ED1C24 — warm, energetic CTA color */
+  --secondary: 358 85% 52%;
   --secondary-foreground: 0 0% 100%;
-  
-  --muted: 140 15% 90%; /* Light sage */
-  --muted-foreground: 140 15% 40%;
-  
-  --accent: 45 80% 65%; /* Soft golden yellow */
-  --accent-foreground: 140 25% 15%;
-  
-  --destructive: 0 70% 55%;
+
+  /* Muted — soft Spring Seedling tint */
+  --muted: 70 35% 93%;
+  --muted-foreground: 131 20% 38%;
+
+  /* Accent — Golden Nectar #FFC421 */
+  --accent: 44 100% 56%;
+  --accent-foreground: 131 29% 14%;
+
+  --destructive: 0 72% 55%;
   --destructive-foreground: 0 0% 100%;
-  
-  --border: 40 20% 85%;
-  --input: 40 20% 85%;
-  --ring: 140 25% 35%;
-  
+
+  /* Warm border — soft apricot tint */
+  --border: 14 30% 88%;
+  --input: 14 30% 88%;
+  --ring: 131 29% 31%;
+
   --radius: 1.5rem;
 
-  --app-font-sans: 'Varela Round', sans-serif;
-  --app-font-serif: 'Varela Round', sans-serif;
+  --app-font-sans:    'Varela Round', sans-serif;
+  --app-font-serif:   'Varela Round', sans-serif;
   --app-font-display: 'Gluten', cursive;
-  --app-font-body: 'Varela Round', sans-serif;
+  --app-font-body:    'Varela Round', sans-serif;
 }
 
+/* Force light mode — brand is always bright and warm */
 .dark {
-  /* Enforcing light mode by default for this cozy brand, but providing dark variables just in case */
-  --background: 140 25% 10%;
-  --foreground: 40 33% 96%;
-  --card: 140 25% 12%;
-  --card-foreground: 40 33% 96%;
-  --card-border: 140 25% 18%;
-  --primary: 140 25% 45%;
-  --primary-foreground: 40 33% 96%;
-  --secondary: 10 70% 55%;
+  --background: 14 100% 97%;
+  --foreground: 131 25% 14%;
+  --card: 14 60% 99%;
+  --card-foreground: 131 25% 14%;
+  --card-border: 14 30% 90%;
+  --primary: 131 29% 31%;
+  --primary-foreground: 14 100% 97%;
+  --secondary: 358 85% 52%;
   --secondary-foreground: 0 0% 100%;
-  --muted: 140 25% 18%;
-  --muted-foreground: 140 15% 70%;
-  --accent: 45 80% 65%;
-  --accent-foreground: 140 25% 15%;
-  --border: 140 25% 18%;
-  --input: 140 25% 18%;
-  --ring: 140 25% 45%;
+  --muted: 70 35% 93%;
+  --muted-foreground: 131 20% 38%;
+  --accent: 44 100% 56%;
+  --accent-foreground: 131 29% 14%;
+  --border: 14 30% 88%;
+  --input: 14 30% 88%;
+  --ring: 131 29% 31%;
 }
 
 @layer base {
@@ -120,28 +127,31 @@
     @apply border-border;
   }
   body {
-    @apply font-body antialiased bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Varela Round', sans-serif;
   }
+  /* Ensure Gluten on every heading element */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
+    font-family: 'Gluten', cursive;
+    font-weight: 500;
+  }
+  /* Ensure form elements inherit Varela Round (browsers don't do this by default) */
+  input, textarea, select, button, optgroup, option {
+    font-family: 'Varela Round', sans-serif;
   }
 }
+
+/* ── Decorative utilities ─────────────────────────────────────── */
 
 .noise-bg {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 50;
-  opacity: 0.03;
+  opacity: 0.025;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
 
-.blob-shape {
-  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
-}
-.blob-shape-2 {
-  border-radius: 50% 50% 30% 70% / 60% 40% 70% 40%;
-}
-.blob-shape-3 {
-  border-radius: 60% 40% 50% 50% / 40% 60% 50% 60%;
-}
+.blob-shape   { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+.blob-shape-2 { border-radius: 50% 50% 30% 70% / 60% 40% 70% 40%; }
+.blob-shape-3 { border-radius: 60% 40% 50% 50% / 40% 60% 50% 60%; }
