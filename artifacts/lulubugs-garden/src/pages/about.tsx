@@ -8,30 +8,30 @@ import brighamPhoto from '../assets/reference/brigham-taylor.jpg';
 export function About() {
   const team = [
     {
-      name: "Jil",
+      name: "Jil Hunter",
       role: "Creator",
-      bio: "Jil draws on her background in special education and her experience raising seven children to shape the heart of Lulubug's Garden. After navigating her own wellness journey, she became dedicated to using art, music, and nature as tools for family connection. As a creator of the show, Jil ensures every episode provides a gentle, supportive space for children to explore their emotional world.",
+      bio: "Creator of Lulubug's Garden and mother of seven, Jil is dedicated to providing families with engaging tools to navigate childhood mental health.",
       color: "primary",
       photo: jilPhoto
     },
     {
       name: "Dr. Karen",
-      role: "Board-Certified Child Psychiatrist",
-      bio: "Dr. Karen is a board-certified child psychiatrist who brings deep expertise in child development to everything we create. She reviews all our content to ensure it fosters emotional wellbeing and age-appropriate growth — giving families confidence that this is a space built with children in mind.",
+      role: "Child Psychiatrist",
+      bio: "A child psychiatrist and developmental expert from the Huntsman Mental Health Institute, Dr. Karen focuses on helping kids understand their emotions and fostering strong connections with caregivers.",
       color: "secondary",
       photo: drKarenPhoto
     },
     {
       name: "Brigham Taylor",
       role: "Director",
-      bio: "Brigham brings a director's eye for warmth and detail to every episode of Lulubug's Garden, shaping how each story looks, sounds, and feels on screen. He works closely with the cast and crew to keep every scene playful, grounded, and true to the spirit of the garden.",
+      bio: "A veteran film producer and former Disney executive (Pirates of the Caribbean, The Jungle Book), Brigham brings blockbuster storytelling expertise to Lulubug's Garden.",
       color: "accent",
       photo: brighamPhoto
     },
     {
       name: "Executive Producers",
       role: "The Village",
-      bio: "By blending our diverse expertise and our love for children, we bring this series to life. Every detail, including narrative, visuals, and take-home resources, is crafted by our dedicated team to ensure kids feel understood, secure, and ready to grow.",
+      bio: "By blending our diverse expertise and our love for children, we bring this series to life. Every detail — narrative, visuals, and take-home resources — is crafted to ensure kids feel understood, secure, and ready to grow.",
       color: "muted",
       photo: teamPhoto
     }

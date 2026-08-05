@@ -36,16 +36,31 @@ export function Contact() {
             Whether you have a question about the show, want to explore a partnership, or just want to share how your little one is enjoying the garden — we'd love to hear from you.
           </p>
           
-          <div className="space-y-8">
-            <div>
-              <h3 className="font-bold text-lg mb-2">General Inquiries</h3>
-              <a href="mailto:office@lulubug.com" className="text-secondary hover:underline font-medium">office@lulubug.com</a>
+          <div className="space-y-6">
+            <div className="p-6 bg-white rounded-3xl border border-border">
+              <h3 className="font-bold text-lg mb-3">Get in Touch</h3>
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="text-xl">🌐</span>
+                  <a href="https://www.lulubugsgarden.com" target="_blank" rel="noopener noreferrer" className="text-secondary hover:underline font-medium">www.lulubugsgarden.com</a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="text-xl">✉️</span>
+                  <a href="mailto:office@lulubug.com" className="text-secondary hover:underline font-medium">office@lulubug.com</a>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-xl mt-0.5">📍</span>
+                  <address className="not-italic text-foreground/80 leading-relaxed">
+                    5132 N 300 W<br />Provo, UT 84604
+                  </address>
+                </div>
+              </div>
             </div>
-            <div>
+            <div className="p-6 bg-white rounded-3xl border border-border">
               <h3 className="font-bold text-lg mb-2">Partnerships</h3>
               <a href="mailto:office@lulubug.com" className="text-secondary hover:underline font-medium">office@lulubug.com</a>
             </div>
-            <div className="p-6 bg-white rounded-3xl border border-border mt-8">
+            <div className="p-6 bg-white rounded-3xl border border-border">
               <p className="font-bold mb-2">Need immediate help?</p>
               <p className="text-sm text-foreground/70">
                 If you or someone you know is struggling or in crisis, please call or text the Suicide & Crisis Lifeline at <strong className="text-primary">988</strong>.

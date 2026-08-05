@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'wouter';
 import { Youtube, ArrowRight, PlayCircle } from 'lucide-react';
 import { NewsletterForm } from '../components/forms/NewsletterForm';
-import bgMeadowSun    from '../assets/reference/bg-meadow-sun.png';
+import setPhoto       from '../assets/reference/set-photo.jpg';
 import bgRoseGardenFg from '../assets/reference/bg-rose-garden-fg.png';
 import hmhfLogo       from '../assets/reference/hmhf-logo.png';
 
@@ -31,9 +31,9 @@ export function Home() {
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <section className="relative h-[560px] md:h-[680px] overflow-hidden">
         <img
-          src={bgMeadowSun}
-          alt="Lulubug's Garden — a sunny meadow in the garden"
-          className="absolute inset-0 w-full h-full object-cover object-center"
+          src={setPhoto}
+          alt="Lulubug's Garden — the magical garden set"
+          className="absolute inset-0 w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/50 to-primary/80" />
 
