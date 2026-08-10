@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'wouter';
 import { Youtube, ArrowRight, PlayCircle } from 'lucide-react';
 import { NewsletterForm } from '../components/forms/NewsletterForm';
-import setPhoto       from '../assets/reference/set-photo.jpg';
+import themeSong      from '../assets/reference/theme-song.mp4';
 import bgRoseGardenFg from '../assets/reference/bg-rose-garden-fg.png';
 import hmhfLogo       from '../assets/reference/hmhf-logo.png';
 
@@ -30,17 +30,17 @@ export function Home() {
 
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <section className="relative h-[560px] md:h-[680px] overflow-hidden">
-        <img
-          src={setPhoto}
-          alt="Lulubug's Garden — the magical garden set"
+        <video
+          src={themeSong}
+          autoPlay
+          muted
+          loop
+          playsInline
           className="absolute inset-0 w-full h-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/70 via-primary/50 to-primary/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/20 to-black/55" />
 
         <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
-          <span className="inline-block py-1 px-4 rounded-full bg-white/20 text-white font-bold text-sm mb-6 tracking-wide uppercase backdrop-blur-sm">
-            Now Streaming on YouTube
-          </span>
           <h1 className="font-display text-5xl md:text-7xl font-bold text-white leading-[1.1] mb-6 drop-shadow-lg">
             Welcome to<br />
             <span className="text-accent">Lulubug's</span> Garden
