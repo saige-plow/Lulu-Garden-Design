@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link } from 'wouter';
-import aboutHero from '../assets/reference/about-hero-team.jpg';
 import jilPhoto from '../assets/reference/jil.jpg';
 import teamPhoto from '../assets/reference/team.jpg';
 import drKarenPhoto from '../assets/reference/dr-karen.jpg';
@@ -40,34 +38,6 @@ export function About() {
 
   return (
     <div className="w-full">
-      {/* Hero Banner */}
-      <section className="relative h-[480px] md:h-[580px] overflow-hidden">
-        <img
-          src={aboutHero}
-          alt="The Lulubug's Garden cast and crew posing together on the garden set"
-          className="absolute inset-0 w-full h-full object-cover object-[center_30%]"
-        />
-        {/* Gradient: lighter at top so the craft activity shows, heavier at bottom for text */}
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/35 to-transparent" />
-        <div className="relative z-10 h-full flex flex-col items-center justify-end pb-14 px-6 text-center">
-          <h1 className="font-display text-4xl md:text-6xl font-bold text-white drop-shadow-lg">
-            Why we planted this garden
-          </h1>
-        </div>
-      </section>
-
-      {/* Mission Content */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-xl md:text-2xl font-display text-foreground/85 leading-relaxed mb-6">
-            We nurture self-awareness, empathy, resilience, and curiosity — through joyful storytelling and interactive play that helps children grow.
-          </p>
-          <p className="text-lg text-secondary font-bold">
-            A world of confident, emotionally healthy children starts in the garden, one feeling at a time.
-          </p>
-        </div>
-      </section>
-
       {/* YouTube CTA */}
       <section className="py-16 px-4 bg-secondary/5">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">

@@ -13,7 +13,7 @@ export function Friends() {
     {
       name: "Lulubug",
       role: "The Heart of the Garden",
-      description: "Lulubug is the heart of the Garden and often helps guide her friends through new experiences. She loves organizing, making lists, and drawing with the children who visit her garden. When things don't go as planned, she learns how to move from frustrated to brave and try again — a true leader who shows it's okay to feel it all.",
+      description: "Lulubug is the heart of the Garden and often helps guide her friends through new experiences.",
       color: "secondary",
       shape: "blob-1" as const,
       photo: luluIllustrated
@@ -21,7 +21,7 @@ export function Friends() {
     {
       name: "Curby",
       role: "The Enthusiastic Caterpillar",
-      description: "Curby is a fun, food-loving caterpillar who brings big energy to everything he does. He's curious, enthusiastic, and loves diving into whatever captures his imagination. Sometimes that excitement can turn into moments of carelessness — but Curby always finds his way back to the fun.",
+      description: "Curby is a fun, food-loving caterpillar who brings big energy to everything he does.",
       color: "primary",
       shape: "blob-2" as const,
       photo: curbyIllustrated
@@ -29,7 +29,7 @@ export function Friends() {
     {
       name: "Sterling",
       role: "The Thoughtful Observer",
-      description: "Sterling is observant and thoughtful, always taking time to understand situations before engaging. He asks good questions and helps the group see things from different perspectives. When big feelings swirl around, Sterling's calm presence helps everyone slow down and make sense of what's going on.",
+      description: "Sterling is observant and thoughtful, taking time to understand situations before engaging.",
       color: "accent",
       shape: "blob-3" as const,
       photo: sterlingIllustrated
@@ -37,7 +37,7 @@ export function Friends() {
     {
       name: "Daisy",
       role: "The Joyful Spirit",
-      description: "Daisy brings big energy and excitement to the Garden, jumping into every adventure with her whole heart. She's the first to suggest a dance party, a silly game, or something new to explore. Her enthusiasm is contagious — and she's learning that all that joy is even better when it's shared.",
+      description: "Daisy brings big energy and excitement to the Garden.",
       color: "accent",
       shape: "circle" as const,
       photo: daisyIllustrated
@@ -45,7 +45,7 @@ export function Friends() {
     {
       name: "Willow",
       role: "The Calming Presence",
-      description: "Willow helps friends pause and listen, bringing a steady, gentle presence to every situation. She has a gift for noticing when someone needs a moment to breathe or a quiet word of encouragement. Willow shows that being calm doesn't mean holding feelings in — it means moving through them with care.",
+      description: "Willow helps friends pause and listen.",
       color: "primary",
       shape: "blob-1" as const,
       photo: willowIllustrated
@@ -53,7 +53,7 @@ export function Friends() {
     {
       name: "Feelings Flower",
       role: "The Emotion Guide",
-      description: "The Feelings Flower helps characters spot, name, and understand big emotions. With colorful petals that represent different feelings, it's a fun, visual way for kids to learn that all emotions are okay — and that naming a feeling is the first step to handling it.",
+      description: "The Feelings Flower helps characters spot, name, and understand big emotions.",
       color: "secondary",
       shape: "blob-2" as const,
       photo: feelingsFlowerPhoto

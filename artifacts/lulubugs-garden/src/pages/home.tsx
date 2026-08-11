@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'wouter';
 import { Youtube, ArrowRight, PlayCircle } from 'lucide-react';
 import { NewsletterForm } from '../components/forms/NewsletterForm';
@@ -7,25 +7,46 @@ import bgRoseGardenFg from '../assets/reference/bg-rose-garden-fg.png';
 import hmhfLogo       from '../assets/reference/hmhf-logo.png';
 import wordmark       from '../assets/reference/wordmark.png';
 
-const episodeCards = [
-  {
-    videoId: 'XZcQn1lD3TQ',
-    label: 'Frustrated',
-    desc: "Lulubug learns it's okay to feel frustrated — and what to do when big feelings bubble up.",
-  },
-  {
-    videoId: 'erLx5BxPHRo',
-    label: 'Helpful',
-    desc: 'When helping feels hard, Lulubug and friends discover that trying your best is what matters most.',
-  },
-  {
-    videoId: 'shO0PRm13Vs',
-    label: 'Games with Curby',
-    desc: 'Join Curby for a fun-filled garden adventure packed with games, giggles, and big feelings.',
-  },
+interface EpisodeCard {
+  videoId: string;
+  label: string;
+}
+
+const FALLBACK_EPISODES: EpisodeCard[] = [
+  { videoId: 'XZcQn1lD3TQ', label: 'Frustrated' },
+  { videoId: 'erLx5BxPHRo', label: 'Helpful' },
+  { videoId: 'shO0PRm13Vs', label: 'Games with Curby' },
 ];
 
+function usePopularEpisodes() {
+  const [episodes, setEpisodes] = useState<EpisodeCard[]>(FALLBACK_EPISODES);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const base = (import.meta.env.BASE_URL ?? '').replace(/\/$/, '');
+    const apiBase = base.replace(/^(\/[^/]+).*/, '$1');
+    fetch(`${apiBase}/api/youtube/popular`)
+      .then((r) => r.json())
+      .then((data) => {
+        if (data.videos && data.videos.length > 0) {
+          setEpisodes(
+            data.videos.map((v: { videoId: string; title: string }) => ({
+              videoId: v.videoId,
+              label: v.title,
+            }))
+          );
+        }
+      })
+      .catch(() => {/* keep fallback */})
+      .finally(() => setLoading(false));
+  }, []);
+
+  return { episodes, loading };
+}
+
 export function Home() {
+  const { episodes, loading } = usePopularEpisodes();
+
   return (
     <div className="w-full">
 
@@ -88,8 +109,8 @@ export function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {episodeCards.map((card) => (
+          <div className={`grid md:grid-cols-3 gap-8 transition-opacity duration-300 ${loading ? 'opacity-50' : 'opacity-100'}`}>
+            {episodes.map((card) => (
               <a
                 key={card.videoId}
                 href={`https://www.youtube.com/watch?v=${card.videoId}`}
@@ -110,7 +131,6 @@ export function Home() {
                   </div>
                 </div>
                 <h3 className="font-display text-xl font-bold mb-2 px-2">{card.label}</h3>
-                <p className="text-primary-foreground px-2 pb-2 text-sm">{card.desc}</p>
               </a>
             ))}
           </div>

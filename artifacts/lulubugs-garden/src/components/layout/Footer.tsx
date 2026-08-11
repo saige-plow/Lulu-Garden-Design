@@ -65,15 +65,11 @@ export function Footer() {
           <div>
             <h4 className="font-display text-lg font-bold mb-4 text-accent">Our Partners</h4>
             <div className="flex flex-col items-start gap-3 mb-8">
-              <a href="https://huntsmanmentalhealthfoundation.org/" target="_blank" rel="noopener noreferrer" className="hover:opacity-90 transition-opacity">
-                <div className="bg-white rounded-xl px-3 py-2 w-40 h-14 flex items-center justify-center">
-                  <img src={hmhfLogo} alt="Huntsman Mental Health Foundation" className="w-full h-full object-contain" />
-                </div>
+              <a href="https://huntsmanmentalhealthfoundation.org/" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                <img src={hmhfLogo} alt="Huntsman Mental Health Foundation" className="h-10 w-auto object-contain brightness-0 invert opacity-80" />
               </a>
-              <a href="https://healthcare.utah.edu/hmhi" target="_blank" rel="noopener noreferrer" className="hover:opacity-90 transition-opacity">
-                <div className="bg-white rounded-xl px-3 py-2 w-40 h-14 flex items-center justify-center">
-                  <img src={hmhiLogo} alt="Huntsman Mental Health Institute" className="w-full h-full object-contain" />
-                </div>
+              <a href="https://healthcare.utah.edu/hmhi" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+                <img src={hmhiLogo} alt="Huntsman Mental Health Institute" className="h-10 w-auto object-contain brightness-0 invert opacity-80" />
               </a>
             </div>
             <h4 className="font-display text-lg font-bold mb-3 text-accent">Connect</h4>
