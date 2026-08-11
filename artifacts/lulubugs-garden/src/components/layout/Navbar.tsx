@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'wouter';
-import { Menu, X, Youtube } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import logo from '../../assets/reference/logo.png';
 
 export function Navbar() {
@@ -47,28 +47,25 @@ export function Navbar() {
                 href="https://www.youtube.com/@LulubugsGarden"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-10 h-10 rounded-full bg-muted text-primary hover:bg-secondary hover:text-white transition-all transform hover:scale-105"
-                aria-label="Watch on YouTube"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#FF0000] px-5 py-2.5 text-sm font-bold text-white hover:bg-[#cc0000] transition-all transform hover:scale-105 shadow-sm"
               >
-                <Youtube size={20} />
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 shrink-0"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                Watch on YouTube
               </a>
-              <Link
-                href="/join"
-                className="inline-flex items-center justify-center rounded-full bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground hover:bg-primary/90 transition-all transform hover:scale-105 shadow-sm"
-              >
-                Join the Garden
-              </Link>
             </div>
           </div>
 
           {/* Mobile */}
           <div className="flex items-center lg:hidden gap-3">
-            <Link
-              href="/join"
-              className="inline-flex items-center justify-center rounded-full bg-primary px-4 py-2 text-sm font-bold text-primary-foreground"
+            <a
+              href="https://www.youtube.com/@LulubugsGarden"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-1.5 rounded-full bg-[#FF0000] px-4 py-2 text-xs font-bold text-white"
             >
-              Join
-            </Link>
+              <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5 shrink-0"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+              YouTube
+            </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 rounded-md text-primary hover:bg-muted focus:outline-none"
@@ -101,9 +98,9 @@ export function Navbar() {
                 href="https://www.youtube.com/@LulubugsGarden"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 py-3 text-base font-bold text-foreground hover:text-secondary"
+                className="inline-flex items-center gap-2 rounded-full bg-[#FF0000] px-6 py-3 text-sm font-bold text-white"
               >
-                <Youtube size={20} className="text-secondary" />
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 shrink-0"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                 Watch on YouTube
               </a>
             </div>

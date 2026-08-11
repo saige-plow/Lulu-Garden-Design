@@ -5,6 +5,7 @@ import { NewsletterForm } from '../components/forms/NewsletterForm';
 import themeSong      from '../assets/reference/theme-song.mp4';
 import bgRoseGardenFg from '../assets/reference/bg-rose-garden-fg.png';
 import hmhfLogo       from '../assets/reference/hmhf-logo.png';
+import wordmark       from '../assets/reference/wordmark.png';
 
 const episodeCards = [
   {
@@ -40,15 +41,17 @@ export function Home() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/20 to-black/55" />
 
-        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
-          <h1 className="font-display text-5xl md:text-7xl font-bold text-white leading-[1.1] mb-6 drop-shadow-lg">
-            Welcome to<br />
-            <span className="text-accent">Lulubug's</span> Garden
-          </h1>
+        <div className="relative z-10 h-full flex flex-col items-center md:items-start justify-center text-center md:text-left px-6 md:px-16 lg:px-24 max-w-4xl">
+          <p className="font-display text-2xl md:text-3xl font-bold text-white drop-shadow mb-3">Welcome to</p>
+          <img
+            src={wordmark}
+            alt="Lulubug's Garden"
+            className="w-72 md:w-[420px] lg:w-[500px] mb-8 drop-shadow-xl"
+          />
           <p className="text-xl md:text-2xl text-white/90 mb-10 max-w-xl font-medium leading-relaxed">
             A cozy place where kids learn that all feelings are okay, and growing up is an adventure we share.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a
               href="https://www.youtube.com/@LulubugsGarden"
               target="_blank"

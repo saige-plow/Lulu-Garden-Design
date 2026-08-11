@@ -232,7 +232,7 @@ export function Press() {
             </section>
 
             <section>
-              <h2 className="font-display text-2xl font-bold mb-5 text-foreground tracking-tight">Watch an Episode</h2>
+              <h2 className="font-display text-2xl font-bold mb-5 text-foreground tracking-tight">Watch on YouTube</h2>
               <div className="rounded-2xl overflow-hidden border border-border shadow-sm">
                 <div className="aspect-video">
                   <iframe
