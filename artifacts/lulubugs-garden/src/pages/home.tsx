@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'wouter';
 import { Youtube, ArrowRight, PlayCircle } from 'lucide-react';
 import { NewsletterForm } from '../components/forms/NewsletterForm';
-import themeSong      from '../assets/reference/theme-song.mp4';
 import bgRoseGardenFg from '../assets/reference/bg-rose-garden-fg.png';
 import hmhfLogo       from '../assets/reference/hmhf-logo.png';
 import wordmark       from '../assets/reference/wordmark.png';
@@ -53,7 +52,7 @@ export function Home() {
       {/* ── Hero ─────────────────────────────────────────────────── */}
       <section className="relative h-[560px] md:h-[680px] overflow-hidden">
         <video
-          src={themeSong}
+          src={`${import.meta.env.BASE_URL}theme-song.mp4`}
           autoPlay
           muted
           loop
