@@ -40,12 +40,14 @@ router.get("/youtube/popular", async (_req, res) => {
       const rawTitle =
         (entry.match(/<title>([^<]+)<\/title>/) ?? [])[1] ?? "";
       // Atom encodes HTML entities in title
-      const title = rawTitle
+      const decoded = rawTitle
         .replace(/&amp;/g, "&")
         .replace(/&lt;/g, "<")
         .replace(/&gt;/g, ">")
         .replace(/&quot;/g, '"')
         .replace(/&#39;/g, "'");
+      // Strip channel name / series suffix appended by YouTube (everything after " | ")
+      const title = decoded.includes(" | ") ? decoded.split(" | ")[0].trim() : decoded;
       const thumbnail = `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`;
       return { videoId, title, thumbnail };
     });
