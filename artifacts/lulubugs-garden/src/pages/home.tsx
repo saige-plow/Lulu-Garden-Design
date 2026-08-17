@@ -53,6 +53,7 @@ export function Home() {
       <section className="relative h-[560px] md:h-[680px] overflow-hidden">
         <video
           src={`${import.meta.env.BASE_URL}theme-song.mp4`}
+          poster={`${import.meta.env.BASE_URL}hero-poster.jpg`}
           autoPlay
           muted
           loop
